@@ -34,7 +34,15 @@ finish:
 
 ![result](img/fib.png)
 
-### Результат ассемблирования (дамп)
+## Aссемблирование / dump
+
+### CLI comand
+
+![cli-dump](img/dump_cli.png)
+
+### [Результат](https://github.com/AvtorPaka/CSA_RISC-V/blob/master/src/Homework/Hw_2/dump.txt) ассемблирования (dump.txt)
+
+### Форматы инструкций
 
 ```assembly
                     # Форматы инструкций
