@@ -38,3 +38,5 @@
 | **devided_by_zero_exception**  | Throws  DevideByZeroException in Rars window and console |
 | **output_calculations**  | Ouput **s0** (quotient) and **s1** (remainder) in console  |
 | **exit_program**  |  Clear values in registers and exit program |
+
+## Testing with C++
