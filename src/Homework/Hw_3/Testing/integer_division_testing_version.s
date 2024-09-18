@@ -4,7 +4,7 @@
 #!!! Be sure to enter full path to the buffer.bin file
 .data
 buffer:    .space 8
-file_path: .asciz "/Users/georgedemchenko/ABC_Risc-V/GitHubPage/src/Homework/Hw_3/Testing/buffer.bin"
+file_path: .asciz "{YOUR_PATH}/buffer.bin"
 
 .text
 main:	
@@ -107,7 +107,6 @@ check_args:
 
 	
 devided_by_zero_exception:
-	li a1 0
 	j exit_program
 
 output_calculations:

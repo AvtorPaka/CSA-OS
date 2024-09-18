@@ -39,4 +39,39 @@
 | **output_calculations**  | Ouput **s0** (quotient) and **s1** (remainder) in console  |
 | **exit_program**  |  Clear values in registers and exit program |
 
-## Testing with C++
+## Autotesting with C++
+
+### You can find [example](https://disk.yandex.ru/i/3sbJotb__i3cVA) video of running tests
+
+### test.cpp execution steps
+
+- Upload 2 32bit integers in **buffer.bin** file
+- Call **bootstrap_test.sh** script which runs **integer_division_testing_version.s**
+    - Asm progream loads these 2 integers from **buffer.bin** in t0, t1 registrs
+    - Calculates quotient and remainder
+    - Upload calculated values in **buffer.bin**
+- Load calculated quotient and remainder from **buffer.bin**
+- Check that the resulting numbers match those calculated using C++
+- Execution continues if the test passes and crashes otherwise
+
+### In order to execute test.cpp by yourself you must change:
+
+1. **boostrap_tets.sh**
+```sh
+java -jar {YOUR_PATH}/rars1_6.jar {YOUR_PATH}/integer_division_testing_version.s
+```
+
+2. **integer_division_testing_version.s**
+
+```assembly
+.data
+buffer:    .space 8
+file_path: .asciz "{YOUR_PATH}/buffer.bin"
+```
+
+3. **test.cpp**
+
+```cpp
+const char* boostrap_path = "{YOUR_PATH}/boostrap_test.sh";
+std::string buffer_path = "{YOUR_PATH}/buffer.bin";
+```
