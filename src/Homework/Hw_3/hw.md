@@ -36,7 +36,7 @@
 | **change_number_sign**  |  Changes the sign of int in **t6** and stores calculated number in **t6** |
 | **check_args**  | Check if **t0** (dividend) is 0 -> output 0 0 <br/> Check if **t1** (divisor) is 0 -> throws DevideByZeroException |
 | **devided_by_zero_exception**  | Throws  DevideByZeroException in Rars window and console |
-| **output_calculations**  | Ouput **s0** (quotient) and **s1** (remainder) in console  |
+| **output_calculations**  | Output **s0** (quotient) and **s1** (remainder) in console  |
 | **exit_program**  |  Clear values in registers and exit program |
 
 ## Autotesting with C++

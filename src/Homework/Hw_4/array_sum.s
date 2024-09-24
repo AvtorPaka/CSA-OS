@@ -44,10 +44,12 @@ calculate_sum:
 	for_sum_loop:
 	lw t1 0(t6)
 	
-	#Проверка на переполнение и суммирование
+	#Проверка на переполнение и суммирование в случае непереполнения
 	beqz s2 end_cont_sum
 	continue_sum:
+		#Внутренняя проверка на переполнение если добавить текущее число - t1
 		blez s3 sum_negative
+		#Проверка на верхнюю границу
 		sum_positive:
 			mv s6 s0
 			sub s6 s6 s3
@@ -58,6 +60,8 @@ calculate_sum:
 			end_if_ov_p:
 			mv s6 zero
 			j end_sum_diff
+		
+		#Проверка на нижнюю границу
 		sum_negative:
 			mv s6 s1
 			sub s6 s6 s3
@@ -68,9 +72,11 @@ calculate_sum:
 			end_if_ov_neg:
 			mv s6 zero
 			j end_sum_diff
+
 		end_sum_diff:
 		
-		
+		#Суммирование в случае если переполнения не случилось
+		#Иначе сохраняем кол-во просуммированных элементов и поднимаем флаг переполнения
 		bnez s2 end_oc
 		overfloaw_case:
 			mv t4 t2
@@ -222,7 +228,18 @@ throw_out_of_range_exception:
 #Метод завершения работы программы
 exit_program:
 	#Очистка использованных регистров
-	
+	mv ra zero
+	mv t0 zero
+	mv t1 zero
+	mv t2 zero
+	mv t3 zero
+	mv t6 zero
+	mv s0 zero
+	mv s1 zero
+	mv s2 zero
+	mv s3 zero
+	mv s7 zero
+	mv a0 zero
 	
 	li a7 10
 	ecall
