@@ -14,6 +14,9 @@ main:
 		li s0 2147483647									# INT32_MAXVALUE
 		li a2 1												# Изначальное значение для текущего факториала внутри вызова рекурсивной функции
 		li a3 1												# Изначальное значение для текущего аргумента факториала внутри вызова рекурсивной функции
+		addi sp sp -8
+		sw a2 4(sp)
+		sw a3 0(sp)
 		jal ra calculate_max_factorial_argument_recursive	#Вызов рекурсивной имплементации
 	end_if_implementation:
 	
@@ -46,18 +49,30 @@ calculate_max_factorial_argument_iterative:
 
 # Метод для посчёта максимального аргумента факториала int32_t рекурсивным способом 
 calculate_max_factorial_argument_recursive:
+	lw a2 4(sp)
+	lw a3 0(sp)
+	addi sp sp 8
+	
 	addi sp sp -4
 	sw ra (sp)
 	
 	mul a2 a2 a3
 	div t0 s0 a2
 	addi a3 a3 1
-	
 	blt t0 a3 done_calculate_max_factorial_argument_recursive
+	
+	addi sp sp -8
+	sw a2 4(sp)
+	sw a3 0(sp)
+	
 	jal ra calculate_max_factorial_argument_recursive
+	
 	
 done_calculate_max_factorial_argument_recursive:
 	addi a0 a0 1
+	addi sp sp -4
+	sw zero (sp)
+	addi sp sp 4
 	lw ra (sp)
 	addi sp sp 4
 	jalr zero, 0(ra)
