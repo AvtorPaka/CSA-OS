@@ -106,6 +106,8 @@ output_result_func:
 exit_program:
 	#Очистка используемых регистров
 	mv a1 zero
+	mv a2 zero
+	mv a3 zero
 	mv t0 zero
 	mv t1 zero
 	mv s0 zero
