@@ -64,6 +64,8 @@ private:
 
         output_buffer_stream.read(reinterpret_cast<char *>(&assembly_quotient), sizeof(int32_t));
         output_buffer_stream.read(reinterpret_cast<char *>(&assembly_remainder), sizeof(int32_t));
+
+        output_buffer_stream.close();
     }
 
 public:
@@ -74,14 +76,14 @@ public:
     }
 
     void Run(int32_t numberOfTests) const {
-        //Generating random int32_t values the way that divisor <= |dividend|
+        std::random_device rand;
+        std::mt19937 gen(rand());
         for (uint32_t i = 0; i < numberOfTests; ++i) {
-
-            std::random_device rand;
-            std::mt19937 gen(rand());
-            std::uniform_int_distribution<int32_t> dist_dividend(std::numeric_limits<int32_t>::min(), std::numeric_limits<int32_t>::max());
+            std::uniform_int_distribution<int32_t> dist_dividend(std::numeric_limits<int32_t>::min(),
+                                                                 std::numeric_limits<int32_t>::max());
             int32_t random_dividend = dist_dividend(gen);
 
+            //Generating random int32_t values the way that divisor <= |dividend|
             std::uniform_int_distribution<int32_t> dist_divisor(-std::abs(random_dividend), std::abs(random_dividend));
             int32_t random_divisor = dist_divisor(gen);
 
