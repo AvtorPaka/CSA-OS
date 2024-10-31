@@ -128,14 +128,20 @@ output_function_result: .asciz "Function result: "
 	stack_push_w(t2)
 	
 	create_double_value(%fr 1)
-	li t2 0
-	#while (t2 < %exp) {... t2++}
-	while_pow_loop:
+	
+	bnez %exp if_not_exp_zero
+	if_exp_zero:
+		j end_if_exp_zero
+	if_not_exp_zero:
+		li t2 0
+		#while (t2 < %exp) {... t2++}
+		while_pow_loop:
 		fmul.d %fr %fr %fbase
 		
 		addi t2 t2 1
 		blt t2 %exp while_pow_loop
-	end_while_pow:
+		end_while_pow:
+	end_if_exp_zero:
 	
 	stack_pop_w(t2)
 .end_macro

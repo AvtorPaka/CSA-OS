@@ -34,7 +34,7 @@ calculate_series:
 		# t4 (%exp) - показатель степени числа
 		# ft6 (%fr) - fp регистр, куда будет записано значение степени
 		pow(fa1 t4 ft6)
-		
+			
 		fmul.d ft5 ft5 ft6
 		fadd.d fa7 fa7 ft5
 		
