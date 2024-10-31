@@ -4,13 +4,12 @@ invalid_m_func_param: .asciz "ValidationException.\nInvalid m variable value -> 
 undefined_function_value: .asciz "Undefined function result."
 input_x_func_param: .asciz "Input x variable value for binomial function: "
 output_function_result: .asciz "Function result: "
-nxt: .asciz " "
 
 #Макрос для ввода аргументов биномиальной функции
 #Параметры :
 # %x - f регистр, куда будет записан x параметр при успешном вводе
 # %m - регистр, куда будет записанн m параметр при успешном вводе
-# Включает валидацию параметров, считайте описание макроса validate_function_variables
+# Включает валидацию параметров, читайте описание макроса validate_function_variables
 .macro input_function_parameters(%x %m)
 	print_string(input_m_func_param)
 	
@@ -67,6 +66,80 @@ nxt: .asciz " "
 		end_if_x_neg_1:				# m != 0 & x != -1.00
 .end_macro
 
+# Макрос для посчета 64-битного факториала натурального числа
+# Параметры:
+# %num - параметр факториала
+# %fr - fp регистр, куда будет записано значение факториала
+.macro calculate_factotial(%num, %fr)
+	stack_push_w(t2)
+	stack_push_d(ft2)
+	
+	bnez %num if_num_not_zero
+	if_num_zero:
+		create_double_value(%fr 1)
+		j end_if_num_zero
+	if_num_not_zero:
+		create_double_value(%fr 1)
+		li t2 1
+		
+		#while (t2 <= num) {... t2++}
+		while_factorial:
+			fcvt.d.wu ft2 t2
+			fmul.d %fr %fr ft2
+			
+			addi t2 t2 1
+			bleu t2 %num while_factorial
+		end_while_factorail:
+				
+	end_if_num_zero:
+	
+	stack_pop_d(ft2)
+	stack_pop_w(t2)
+.end_macro
+
+#Макрос для посчета биномиального коефицента - C из n по k
+# Параметры:
+# %n - n параметр биномиального коефицента
+# %k - k параметр биномиального коефицента
+# %fr - fp регистр, куда будет записано посчитанное значение
+.macro calculate_binomial_coef(%n %k %fr)
+	stack_push_w(t3)
+	stack_push_d(ft3)
+	stack_push_d(ft4)
+	
+	calculate_factotial(%n %fr)
+	sub t3 %n %k
+	calculate_factotial(%k ft3)
+	calculate_factotial(t3 ft4)
+	fmul.d ft3 ft3 ft4
+	fdiv.d %fr %fr ft3
+	
+	stack_pop_d(ft4)
+	stack_pop_d(ft3)
+	stack_pop_w(t3)
+.end_macro
+
+# Макрос для посчета степени (натуральной) дробного числа двойной точности
+# Параметры:
+# %fbase - число для возведения в степень
+# %exp - показатель степени числа
+# %fr - fp регистр, куда будет записано значение степени
+.macro pow(%fbase %exp %fr)
+	stack_push_w(t2)
+	
+	create_double_value(%fr 1)
+	li t2 0
+	#while (t2 < %exp) {... t2++}
+	while_pow_loop:
+		fmul.d %fr %fr %fbase
+		
+		addi t2 t2 1
+		blt t2 %exp while_pow_loop
+	end_while_pow:
+	
+	stack_pop_w(t2)
+.end_macro
+
 #Макрос для вывода результатов работы биномиальной функции функции
 # Параметры
 # %fnum - десятичное число двойной точности, резултат функции
@@ -77,7 +150,7 @@ nxt: .asciz " "
 
 #Макрос для создания дробного числа двоичной точности(double) из целого числа
 #Параметры:
-# %fr - f регистр, куда будет записано число
+# %fr - fp регистр, куда будет записано число
 # %num - число, которое нужно преобразовать и записать
 .macro create_double_value(%fr %num)
 	stack_push_w(t0)
@@ -139,13 +212,6 @@ nxt: .asciz " "
 	print_char('\n')
 .end_macro
 
-# Макрос для вывода символа пробела в консоль
-.macro next
-	la a0 nxt
-	li a7 4
-	ecall
-.end_macro
-	
 # Макрос для завершения работы программы
 .macro exit_program
 	li a7, 10
