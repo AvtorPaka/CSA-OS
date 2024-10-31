@@ -1,6 +1,3 @@
-.data
-text_stump: .asciz "ok"
-
 .include "macrolib.s"
 
 .global main
@@ -26,4 +23,4 @@ main:
 	# fa0(%fnum) - десятичное число двойной точности, резултат функции
 	print_function_result(fa0)
 		
-	exit_program
+	exit_program()

@@ -4,6 +4,9 @@ invalid_m_func_param: .asciz "ValidationException.\nInvalid m variable value -> 
 undefined_function_value: .asciz "Undefined function result."
 input_x_func_param: .asciz "Input x variable value for binomial function: "
 output_function_result: .asciz "Function result: "
+test_separator: .asciz "------------------------------------"
+output_x_string: .asciz "Current x value: "
+output_m_string: .asciz "Current m value: "
 
 #Макрос для ввода аргументов биномиальной функции
 #Параметры :
@@ -180,6 +183,19 @@ output_function_result: .asciz "Function result: "
 	stack_pop_d(fa0)
 .end_macro
 
+# Макрос для вывода целого числа в консоль
+#Параметры:
+# %num - регистр, значение которого будет выведено в консоль
+.macro print_int(%num)
+	stack_push_w(a0)
+	
+	mv a0 %num
+	li a7 1
+	ecall
+	
+	stack_pop_w(a0)
+.end_macro
+
 # Макрос для вывода строки в консоль
 #Параметры:
 # %str - лейбл с строкой, значение которой будет выведено в консоль
@@ -260,4 +276,125 @@ output_function_result: .asciz "Function result: "
 .macro stack_pop_w(%x)
 	lw	%x (sp)
 	addi	sp sp 4
+.end_macro
+
+# Макрос для вывода разделителя в тестах
+.macro print_test_separator()
+	newline()
+	print_string(test_separator)
+	newline()
+.end_macro
+
+# Макрос для вывода параметров функции в тестах
+# Параметры:
+# %num - m параметр функции, целое число
+# %fnum - x параметр функции, дробное число двоичной точности
+.macro print_test_params(%num %fnum)
+	print_string(output_x_string)
+	print_double_value(%fnum)
+	newline()
+	print_string(output_m_string)
+	print_int(%num)
+.end_macro
+
+#Макрос для генерации набора тестовых данных
+#Параметры: 
+# %arrx - ссылка на массив, куда будут записаны x параметры тестовых данных
+# %arrm - ссылка на массив, куда будут записаны m параметры тестовых данных 
+# %size - регистр, куда будет записан размер массивов тестовых данных
+.macro generate_test_data(%arrx %arrm %size)
+.data
+test_x_1: .double 1.00
+test_x_2: .double -2.00
+test_x_3: .double 54.124
+test_x_4: .double 11.78
+test_x_5: .double 2.5
+test_x_6: .double 1786.444
+test_x_7: .double -57.22
+.text
+	stack_push_w(%arrx)
+	stack_push_w(%arrm)
+	stack_push_w(t3)
+	stack_push_w(t2)
+	stack_push_w(t1)
+	stack_push_d(ft0)
+	
+	mv t1 %arrx
+	mv t2 %arrm
+	
+	# Первый тестовый набор
+	fld ft0 test_x_1 t3
+	fsd ft0 0(t1)
+	
+	li t3 14
+	sw t3 0(t2)
+	
+	addi t1 t1 8
+	addi t2 t2 4
+	
+	# Второй тестовый набор
+	fld ft0 test_x_2 t3
+	fsd ft0 0(t1)
+	
+	li t3 19
+	sw t3 0(t2)
+	
+	addi t1 t1 8
+	addi t2 t2 4
+	
+	# Третий тестовый набор
+	fld ft0 test_x_3 t3
+	fsd ft0 0(t1)
+	
+	li t3 3
+	sw t3 0(t2)
+	
+	addi t1 t1 8
+	addi t2 t2 4
+	
+	# Четвертый тестовый набор
+	fld ft0 test_x_4 t3
+	fsd ft0 0(t1)
+	
+	li t3 5
+	sw t3 0(t2)
+	
+	addi t1 t1 8
+	addi t2 t2 4
+	
+	# Пятый тестовый набор
+	fld ft0 test_x_5 t3
+	fsd ft0 0(t1)
+	
+	li t3 9
+	sw t3 0(t2)
+	
+	addi t1 t1 8
+	addi t2 t2 4
+	
+	# Шестой тестовый набор
+	fld ft0 test_x_6 t3
+	fsd ft0 0(t1)
+	
+	li t3 2
+	sw t3 0(t2)
+	
+	addi t1 t1 8
+	addi t2 t2 4
+	
+	# Седьмой тестовый набор
+	fld ft0 test_x_7 t3
+	fsd ft0 0(t1)
+	
+	li t3 3
+	sw t3 0(t2)
+
+	
+	li %size 7
+	stack_pop_d(ft0)
+	stack_pop_w(t1)
+	stack_pop_w(t2)
+	stack_pop_w(t3)
+	stack_pop_w(%arrm)
+	stack_pop_w(%arrx)
 .end_macro
