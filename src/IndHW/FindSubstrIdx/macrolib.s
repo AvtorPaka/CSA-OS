@@ -19,6 +19,25 @@
 .end_macro
 #------------------------------------------------
 
+
+.macro strlen(%str)
+    stack_push_w(t0)
+    stack_push_w(t1)
+    li      t0 0
+    mv a0 %str
+loop_len:
+    lb      t1 (a0)
+    beqz    t1 end_loop_len
+    addi    t0 t0 1
+    addi    a0 a0 1
+    b       loop_len
+end_loop_len:
+    mv      a0 t0
+    stack_pop_w(t1)
+    stack_pop_w(t0)
+.end_macro
+
+
 # Макрос для вывода целого числа в консоль
 #Параметры:
 # %num - регистр, значение которого будет выведено в консоль
@@ -123,10 +142,20 @@ read_error: .asciz "ReadError -> Unable to read from file."
 	addi	sp sp 4
 .end_macro
 
+# Макрос для ввода подстроки для поиска в тексте
+.macro input_substring(%strbuf, %size)
+.data
+input_substring_text: .asciz "Input substring to search for: "
+
+.text
+	print_string(input_substring_text)
+	str_get(%strbuf, %size)
+.end_macro
+
 #-------------------------------------------------------------------------------
 # Ввод строки в буфер заданного размера с заменой перевода строки нулем
 # %strbuf - регистр с адерсом буфера
-# %size - регистр с константой ограничивающей размер вводимой строки
+# %size - регистр с 32-битным числом, ограничивающим размер вводимой строки
 .macro str_get(%strbuf, %size)
     stack_push_w(a0)
     mv      a0 %strbuf

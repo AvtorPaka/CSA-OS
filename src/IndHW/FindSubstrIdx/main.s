@@ -1,10 +1,11 @@
 .eqv BUFFER_SIZE 512
 .eqv PATH_SIZE 256
+.eqv SUBSTRING_SIZE 256
 
 .data
 data_buffer: .space BUFFER_SIZE
 path_buffer: .space PATH_SIZE
-ping: .asciz "pong"
+substr_buffer: .space SUBSTRING_SIZE
 
 
 .include "macrolib.s"
@@ -24,9 +25,28 @@ main:
 	# Возвращаемое значение:
 	# a0 - адрес памяти на хипе, куда были записаны данные
 	
-
-	li a7 4
-	ecall
+	mv s1 a0
 	
+	# Вызов макроса для ввода подстроки поиска
+	# Передаваемые параметры:
+	la a0 substr_buffer	# %strbuf (a0) - буффер, куда будет записана строка
+	li a1 SUBSTRING_SIZE	# %size (a1) - максимальный размер буффера
+	input_substring(a0, a1)
+	# Возвращаемое значение: нет
+		
+	# Вызов макроса для поиска индексов первого символа для всех вхождений подстроки в строку
+	# Передаваемые параметры:
+	mv a0 s1		#
+	la a1 substr_buffer	# 
+	jal find_substr_idx
+	# Возвращаемые значения:
+	# a0 - адресс полученного массива индексов в куче
+	# a1 - размер полученного массива
 
+	mv s2 a0
+	mv s3 a1
+	
+	mv a0 s1
+	li a7 4
+	ecall		
 	exit_program()
