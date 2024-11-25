@@ -20,6 +20,131 @@
 #------------------------------------------------
 
 
+#------------------------------------------------
+# Макрос-обертка над попдрограммой ввода файла и  загрузки данных из файла
+.macro load_and_input_from_file_func(%pathB, %pathS, %dataB, %dataS)
+.data
+input_load_file_path: .asciz "Input path to the file to load data from: "
+.text
+	mv a0 %pathB
+	mv a1 %pathS
+	
+	print_string(input_load_file_path)
+	# a0 - адрес буффера для хранения пути к файлу
+	# a1 - максимальный размер пути к файлу
+	str_get(a0, a1)		# Вызов макроса записи пути к файлу в соответсвующий буффер
+	
+	mv a2 %dataB
+	mv a3 %dataS
+	jal load_from_file
+.end_macro
+#------------------------------------------------
+
+#------------------------------------------------
+# Макрос-обертка над попдрограммой загрузки данных в файл
+.macro upload_to_file_func(%pathB, %pathS, %dataB, %dataS)
+.data
+input_upload_file_path: .asciz "\nInput path to the file to write data to: "
+.text
+	mv a0 %pathB
+	mv a1 %pathS
+	mv a2 %dataB
+	mv a3 %dataS
+	jal upload_to_file
+.end_macro
+#------------------------------------------------
+
+#------------------------------------------------
+# Макрос-обертка над попдрограммой загрузки данных в файл и ввода пути к файлу
+.macro upload_to_file_input_func(%pathB, %pathS, %dataB, %dataS)
+.data
+input_upload_file_path: .asciz "\nInput path to the file to write data to: "
+.text
+	mv a0 %pathB
+	mv a1 %pathS
+	
+	print_string(input_upload_file_path)
+	# a0 - адрес буффера для хранения пути к файлу
+	# a1 - максимальный размер пути к файлу
+	str_get(a0, a1)		# Вызов макроса записи пути к файлу в соответсвующий буффер
+	
+	mv a2 %dataB
+	mv a3 %dataS
+	jal upload_to_file
+.end_macro
+#------------------------------------------------
+
+#------------------------------------------------
+# Макрос-обертка над попдрограммой для поиска индексов первого символа для всех вхождений подстроки в строку
+.macro find_substr_idx_func(%data, %subtr)
+	mv a0 %data
+	mv a1 %subtr
+	jal find_substr_idx
+.end_macro
+#------------------------------------------------
+
+
+#------------------------------------------------
+# Макрос-обертка над попдрограммой вывода резульатов в консоль
+.macro upload_to_console_func(%arr, %size)
+.data
+idx_output: .asciz "\nFound indexes of first char of substring:\n"
+.text
+	print_string(idx_output)
+	mv a0 %arr
+	mv a1 %size
+	jal upload_to_console
+.end_macro
+#------------------------------------------------
+
+#------------------------------------------------
+# Макрос-обертка над попдрограммой для перевода массива 32-битных чисел в строку
+.macro convert_array_to_string_func(%arr, %size, %buff)
+	mv a0 %arr
+	mv a1 %size
+	mv a2 %buff
+	jal convert_array_to_string
+.end_macro
+#------------------------------------------------
+
+# Макрос для выбора пользователем способа вывода полученных данных в файл или консоль
+# Выходные данные:
+# a0 - 1 при выводе в консоль, 0 при выводе в файл
+.macro chose_output()
+.data
+choose_output_impl: .asciz "Choose a data output implementation:\n'Y'- output to console\n'N' - output to the file\n"
+.text
+	stack_push_w(t0)
+	
+	print_string(choose_output_impl)
+	
+	while_bad_char_loop:
+		newline()
+		li a7 12
+		ecall
+		
+		li t0 0x4E
+		beq a0 t0 if_n
+		li t0 0x59
+		beq a0 t0 if_y
+		j if_bad_char
+		
+		if_n:
+			li a0 0
+			j end_bch_loop
+		if_y:
+			li a0 1
+			j end_bch_loop
+			
+		if_bad_char:
+		
+		j while_bad_char_loop	
+	end_bch_loop:
+	
+	stack_pop_w(t0)
+.end_macro
+
+
 .macro strlen(%str)
     stack_push_w(t0)
     stack_push_w(t1)
@@ -67,14 +192,20 @@ end_loop_len:
 
 # Макрос для вывода символа в консоль
 .macro print_char(%x)
-   li a7, 11
-   li a0, %x
-   ecall
+	stack_push_w(a0)
+   	li a7, 11
+   	li a0, %x
+   	ecall
+   	stack_pop_w(a0)
 .end_macro
 
 # Макрос для вывода символа переноса строки в консоль
 .macro newline
 	print_char('\n')
+.end_macro
+
+.macro next_space()
+	print_char(';')
 .end_macro
 
 # Макрос для завершения работы программы
@@ -186,6 +317,7 @@ replace:
 .eqv WRITE_ONLY	1	# Открыть для записи
 .eqv APPEND	    9	# Открыть для добавления
 .macro open_and_validate(%file_name, %opt)
+    stack_push_w(a1)
     li   	a7 1024     	# Системный вызов открытия файла
     mv      a0 %file_name   # Имя открываемого файла
     li   	a1 %opt        	# Открыть для чтения (флаг = 0)
@@ -198,6 +330,7 @@ replace:
     	throw_invalid_file_path_error()
     end_if_invalid_path:
     stack_pop_w(t1)
+    stack_pop_w(a1)
 .end_macro
 
 #-------------------------------------------------------------------------------
@@ -237,6 +370,6 @@ replace:
 # Выделение области динамической памяти заданного размера
 .macro allocate(%size)
     li a7, 9
-    mv a0, %size	# Размер блока памяти
+    mv a0, %size
     ecall
 .end_macro

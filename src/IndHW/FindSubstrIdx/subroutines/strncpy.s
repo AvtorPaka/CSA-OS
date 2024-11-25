@@ -25,6 +25,7 @@ strncpy:
 	stack_push_w(a0)
 	stack_push_w(a1)
 	stack_push_w(a2)
+
 	
 	bgez a2 end_if_invalid_number_arg
 	if_invalid_number_arg:
@@ -69,6 +70,7 @@ strncpy:
 		sb t2 (t3)
 	end_if_not_terminated:
 	
+
 	stack_pop_w(a2)
 	stack_pop_w(a1)
 	stack_pop_w(a0)

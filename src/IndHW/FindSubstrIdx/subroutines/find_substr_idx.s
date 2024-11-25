@@ -69,10 +69,13 @@ find_substr_idx:
 					mv t6 zero
 					li t5 -1
 					mv t2 s1
+					j next_char_skip
 							
 				if_not_substring:
-				
 				addi t2 t2 1
+				
+				next_char_skip:	
+
 				j end_if_eq
 			if_chars_not_eq:
 				mv t2 s1
