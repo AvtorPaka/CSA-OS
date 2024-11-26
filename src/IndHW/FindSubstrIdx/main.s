@@ -8,6 +8,7 @@ data_buffer: .space BUFFER_SIZE
 path_buffer: .space PATH_SIZE
 substr_buffer: .space SUBSTRING_SIZE
 int_str_buffer: .space INTTOSTR_BUFF_SIZE
+empty_string: .asciz " "
 
 .include "macrolib.s"
 
@@ -51,9 +52,9 @@ main:
 	# Вызов макроса выбора метода вывода полученных данных
 	chose_output()
 	# Возвращаемое значение:
-	# a0 - 1 при выводе в консоль, 0 при выводе в файл
+	# a0 - 0 при дополнительном выводе в консоль, 1 при выводе в файл
 	
-	beqz a0 if_file_output
+	bnez a0 if_file_output
 	if_console_output:
 	
 		# Вызов подпрограммы (обернутой в макрос) для вывода полученных данных в консоль
@@ -61,7 +62,6 @@ main:
 		# %arr (s2) - адресс начала области памяти с массивом 32-битных чисел
 		# %size (s3) - размер массива
 		upload_to_console_func(s2, s3)
-		j end_if_output
 	if_file_output:
 		blez s3 if_idx_array_empty
 		
@@ -83,9 +83,15 @@ main:
 		# %dataB (a2) - адрес памяти на куче где хранится строка для записи в файл
 		# %dataS (a3) - размер записываемой строки в байтах
 		upload_to_file_input_func(a0, a1, s4, s5)
+		j end_if_output
 		
 		if_idx_array_empty:
-		
+			# Очищаем содержимое файла записи в случае если не найдено индексов подстроки 
+			la a0 path_buffer	# %pathB (a0) - буффер для хранения пути к файлу
+			li a1 PATH_SIZE		# %pathS (a1) - максимальный размер пути к файлу (размер буффера)
+			la s4 empty_string
+			li s5 1
+			upload_to_file_input_func(a0, a1, s4, s5)
 	end_if_output:
 			
 	exit_program()

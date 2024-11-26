@@ -29,10 +29,11 @@ input_load_file_path: .asciz "Input path to the file to load data from: "
 	mv a0 %pathB
 	mv a1 %pathS
 	
-	print_string(input_load_file_path)
+	#print_string(input_load_file_path)
 	# a0 - адрес буффера для хранения пути к файлу
 	# a1 - максимальный размер пути к файлу
-	str_get(a0, a1)		# Вызов макроса записи пути к файлу в соответсвующий буффер
+	#str_get(a0, a1)		# Вызов макроса записи пути к файлу в соответсвующий буффер
+	str_get_dialog(input_load_file_path, %pathB, %pathS)
 	
 	mv a2 %dataB
 	mv a3 %dataS
@@ -61,10 +62,11 @@ input_upload_file_path: .asciz "\nInput path to the file to write data to: "
 	mv a0 %pathB
 	mv a1 %pathS
 	
-	print_string(input_upload_file_path)
+	#print_string(input_upload_file_path)
 	# a0 - адрес буффера для хранения пути к файлу
 	# a1 - максимальный размер пути к файлу
-	str_get(a0, a1)		# Вызов макроса записи пути к файлу в соответсвующий буффер
+	#str_get(a0, a1)		# Вызов макроса записи пути к файлу в соответсвующий буффер
+	str_get_dialog(input_upload_file_path, %pathB, %pathS)
 	
 	mv a2 %dataB
 	mv a3 %dataS
@@ -107,31 +109,27 @@ idx_output: .asciz "\nFound indexes of first char of substring:\n"
 
 # Макрос для выбора пользователем способа вывода полученных данных в файл или консоль
 # Выходные данные:
-# a0 - 1 при выводе в консоль, 0 при выводе в файл
+# a0 - 0 при выводе в консоль, 1 при выводе в файл
 .macro chose_output()
 .data
-choose_output_impl: .asciz "Choose a data output implementation:\n'Y'- output to console\n'N' - output to the file\n"
+choose_output_impl: .asciz "Would you like to additionaly output found indexes to the console?"
 .text
 	stack_push_w(t0)
 	
-	print_string(choose_output_impl)
-	
 	while_bad_char_loop:
-		newline()
-		li a7 12
+		li a7 50
+		la a0 choose_output_impl
 		ecall
 		
-		li t0 0x4E
+		li t0 1
+		beqz a0 if_y
 		beq a0 t0 if_n
-		li t0 0x59
-		beq a0 t0 if_y
-		j if_bad_char
-		
+		j if_bad_char	
 		if_n:
-			li a0 0
+			li a0 1
 			j end_bch_loop
 		if_y:
-			li a0 1
+			li a0 0
 			j end_bch_loop
 			
 		if_bad_char:
@@ -275,10 +273,9 @@ read_error: .asciz "ReadError -> Unable to read from file."
 .macro input_substring(%strbuf, %size)
 .data
 input_substring_text: .asciz "Input substring to search for: "
-
 .text
-	print_string(input_substring_text)
-	str_get(%strbuf, %size)
+	#print_string(input_substring_text)
+	str_get_dialog(input_substring_text, %strbuf, %size)
 .end_macro
 
 #-------------------------------------------------------------------------------
@@ -306,6 +303,48 @@ replace:
     stack_pop_w(s2)
     stack_pop_w(s1)
     stack_pop_w(s0)
+    stack_pop_w(a0)
+.end_macro
+
+#-------------------------------------------------------------------------------
+# Ввод строки в буфер заданного размера через диалговое окно с заменой перевода строки нулем
+# %dialogString - лейб строки для вывода пользователем в окно
+# %strbuf - регистр с адерсом буфера
+# %size - регистр с 32-битным числом, ограничивающим размер вводимой строки
+.macro str_get_dialog(%dialogString, %strbuf, %size)
+    stack_push_w(a0)
+    stack_push_w(a1)
+    stack_push_w(a2)
+    stack_push_w(s0)
+    stack_push_w(s1)
+    stack_push_w(s2)
+    mv s1 %strbuf
+    mv s2 %size
+    
+    while_cancel_or_empty:
+	    la      a0 %dialogString
+	    mv      a1 s1
+	    mv	    a2 s2
+	    li      a7 54
+	    ecall
+	    
+	    bnez a1 while_cancel_or_empty
+    end_while_coe:
+        
+    li	s0 '\n'
+next:
+    lb	s2  (s1)
+    beq s0	s2	replace
+    addi s1 s1 1
+    b next
+replace:
+    sb	zero (s1)
+    
+    stack_pop_w(s2)
+    stack_pop_w(s1)
+    stack_pop_w(s0)
+    stack_pop_w(a2)
+    stack_pop_w(a1)
     stack_pop_w(a0)
 .end_macro
 
