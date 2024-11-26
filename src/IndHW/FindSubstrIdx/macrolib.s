@@ -43,8 +43,6 @@ input_load_file_path: .asciz "Input path to the file to load data from: "
 #------------------------------------------------
 # Макрос-обертка над попдрограммой загрузки данных в файл
 .macro upload_to_file_func(%pathB, %pathS, %dataB, %dataS)
-.data
-input_upload_file_path: .asciz "\nInput path to the file to write data to: "
 .text
 	mv a0 %pathB
 	mv a1 %pathS
@@ -372,4 +370,97 @@ replace:
     li a7, 9
     mv a0, %size
     ecall
+.end_macro
+
+# Макрос для формирования набора тестовых данных
+# Входные параметры:
+# %inputArray - адрес начала области памяти для записи указателей на входные пути файлов
+# %substrArray - адрес начала области памяти для записи подстрок поиска для тестов
+# %outputArray - адрес начала области памяти для записи указателей на выходные пути файлов
+# Выходные параметры: нет
+.macro initialize_tests_data(%inputArray, %substrArray, %outputArray)
+.data
+test_input_path_1: .asciz "data/input/1.txt"
+test_input_path_2: .asciz "data/input/2.txt"
+test_input_path_3: .asciz "data/input/3.txt"
+test_input_path_4: .asciz "data/input/4.txt"
+test_input_path_5: .asciz "data/input/5.txt"
+test_substr_1: .asciz "test"
+test_substr_2: .asciz "талант"
+test_substr_3: .asciz "а"
+test_substr_4: .asciz "jtof"
+test_substr_5: .asciz "Navy SEAL"
+test_output_path_1: .asciz "data/output/1.txt"
+test_output_path_2: .asciz "data/output/2.txt"
+test_output_path_3: .asciz "data/output/3.txt"
+test_output_path_4: .asciz "data/output/4.txt"
+test_output_path_5: .asciz "data/output/5.txt"
+.text
+	stack_push_w(s1)
+	stack_push_w(s2)
+	stack_push_w(s3)
+	stack_push_w(s4)
+	stack_push_w(s5)
+	la s1 %inputArray
+	la s2 %substrArray
+	la s3 %outputArray
+	
+	# Первый тест
+	la s4 test_input_path_1
+	sw s4 (s1)
+	addi s1 s1 4
+	la s4 test_substr_1
+	sw s4 (s2)
+	addi s2 s2 4
+	la s4 test_output_path_1
+	sw s4 (s3)
+	addi s3 s3 4
+	
+	# Второй тест
+	la s4 test_input_path_2
+	sw s4 (s1)
+	addi s1 s1 4
+	la s4 test_substr_2
+	sw s4 (s2)
+	addi s2 s2 4
+	la s4 test_output_path_2
+	sw s4 (s3)
+	addi s3 s3 4
+	
+	# Третий тест
+	la s4 test_input_path_3
+	sw s4 (s1)
+	addi s1 s1 4
+	la s4 test_substr_3
+	sw s4 (s2)
+	addi s2 s2 4
+	la s4 test_output_path_3
+	sw s4 (s3)
+	addi s3 s3 4
+	
+	# Четвертый тест
+	la s4 test_input_path_4
+	sw s4 (s1)
+	addi s1 s1 4
+	la s4 test_substr_4
+	sw s4 (s2)
+	addi s2 s2 4
+	la s4 test_output_path_4
+	sw s4 (s3)
+	addi s3 s3 4
+	
+	# Пятый тест
+	la s4 test_input_path_5
+	sw s4 (s1)
+	la s4 test_substr_5
+	sw s4 (s2)
+	la s4 test_output_path_5
+	sw s4 (s3)
+	
+	
+	stack_pop_w(s5)
+	stack_pop_w(s4)
+	stack_pop_w(s3)
+	stack_pop_w(s2)
+	stack_pop_w(s1)
 .end_macro
