@@ -1,0 +1,5 @@
+guestNumber=100
+singleRoomStayTime=6000000
+doubleRoomStayTime=3000000
+newGuestArrivalTime=200000
+logFilePath=../logs/log_3.txt
