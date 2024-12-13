@@ -38,14 +38,14 @@ int main(int argc, char *argv[]) {
                           << "Use one of this two approaches to launch the program"
                           << helpDelimiter
                           << "./gender_hotel <guests_number> <single_room_stay_time> <double_room_stay_time> <new_guest_arrival_time> <log_file_path>"
-                          << "\n./gender_hotel -c <config_file_path>"
+                          << "\n./gender_hotel -f <config_file_path>"
                           << helpDelimiter
                           << "Arguments description :"
                           << helpDelimiter
                           << "<guests_number> - number of guests (threads) who will try to get room in a hotel\n"
-                          << "<single_room_stay_time> - time of stay of a guest in a single hotel room in microseconds (>= 300000 or 300000 elsewhere) \n"
-                          << "<double_room_stay_time> - time of stay of a guest in a double hotel room in microseconds (>= 300000 or 300000 elsewhere)\n"
-                          << "<new_guest_arrival_time> - delay between each new guest (thread) attempt to get a hotel room in microseconds (>= 20000 or 20000 elsewhere)\n"
+                          << "<single_room_stay_time> - time of stay of a guest in a single hotel room in microseconds (>= 300000 or 300000 otherwise) \n"
+                          << "<double_room_stay_time> - time of stay of a guest in a double hotel room in microseconds (>= 300000 or 300000 otherwise)\n"
+                          << "<new_guest_arrival_time> - delay between each new guest (thread) attempt to get a hotel room in microseconds (>= 20000 or 20000 otherwise)\n"
                           << "<log_file_path> - path to the file to write logs to."
                           << helpDelimiter
                           << "Config file structure :"

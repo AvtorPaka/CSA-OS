@@ -1,0 +1,390 @@
+--------------------
+New guest with: <id> = 1 <gender> = Male trying to stay in the hotel
+Number of free single rooms: 10 | Number of free double rooms: 15
+--------------------
+Guest with: <id> = 1 <gender> = Male got a room with
+Type : Single
+ID : 1
+Number of free single rooms: 9 | Number of free double rooms: 15
+--------------------
+New guest with: <id> = 2 <gender> = Male trying to stay in the hotel
+Number of free single rooms: 9 | Number of free double rooms: 15
+--------------------
+Guest with: <id> = 2 <gender> = Male got a room with
+Type : Single
+ID : 2
+Number of free single rooms: 8 | Number of free double rooms: 15
+--------------------
+New guest with: <id> = 3 <gender> = Male trying to stay in the hotel
+Number of free single rooms: 8 | Number of free double rooms: 15
+--------------------
+Guest with: <id> = 3 <gender> = Male got a room with
+Type : Single
+ID : 3
+Number of free single rooms: 7 | Number of free double rooms: 15
+--------------------
+New guest with: <id> = 4 <gender> = Male trying to stay in the hotel
+Number of free single rooms: 7 | Number of free double rooms: 15
+--------------------
+Guest with: <id> = 4 <gender> = Male got a room with
+Type : Single
+ID : 4
+Number of free single rooms: 6 | Number of free double rooms: 15
+--------------------
+New guest with: <id> = 5 <gender> = Female trying to stay in the hotel
+Number of free single rooms: 6 | Number of free double rooms: 15
+--------------------
+Guest with: <id> = 5 <gender> = Female got a room with
+Type : Single
+ID : 5
+Number of free single rooms: 5 | Number of free double rooms: 15
+--------------------
+New guest with: <id> = 6 <gender> = Female trying to stay in the hotel
+Number of free single rooms: 5 | Number of free double rooms: 15
+--------------------
+Guest with: <id> = 6 <gender> = Female got a room with
+Type : Single
+ID : 6
+Number of free single rooms: 4 | Number of free double rooms: 15
+--------------------
+New guest with: <id> = 7 <gender> = Male trying to stay in the hotel
+Number of free single rooms: 4 | Number of free double rooms: 15
+--------------------
+Guest with: <id> = 7 <gender> = Male got a room with
+Type : Single
+ID : 7
+Number of free single rooms: 3 | Number of free double rooms: 15
+--------------------
+New guest with: <id> = 8 <gender> = Male trying to stay in the hotel
+Number of free single rooms: 3 | Number of free double rooms: 15
+--------------------
+Guest with: <id> = 8 <gender> = Male got a room with
+Type : Single
+ID : 8
+Number of free single rooms: 2 | Number of free double rooms: 15
+--------------------
+New guest with: <id> = 9 <gender> = Female trying to stay in the hotel
+Number of free single rooms: 2 | Number of free double rooms: 15
+--------------------
+Guest with: <id> = 9 <gender> = Female got a room with
+Type : Single
+ID : 9
+Number of free single rooms: 1 | Number of free double rooms: 15
+--------------------
+New guest with: <id> = 10 <gender> = Female trying to stay in the hotel
+Number of free single rooms: 1 | Number of free double rooms: 15
+--------------------
+Guest with: <id> = 10 <gender> = Female got a room with
+Type : Single
+ID : 10
+Number of free single rooms: 0 | Number of free double rooms: 15
+--------------------
+New guest with: <id> = 11 <gender> = Male trying to stay in the hotel
+Number of free single rooms: 0 | Number of free double rooms: 15
+--------------------
+Guest with: <id> = 11 <gender> = Male got a room with
+Type : Double
+ID : 1
+Number of free single rooms: 0 | Number of free double rooms: 15
+--------------------
+New guest with: <id> = 12 <gender> = Female trying to stay in the hotel
+Number of free single rooms: 0 | Number of free double rooms: 15
+--------------------
+Guest with: <id> = 12 <gender> = Female got a room with
+Type : Double
+ID : 2
+Number of free single rooms: 0 | Number of free double rooms: 15
+--------------------
+New guest with: <id> = 13 <gender> = Female trying to stay in the hotel
+Number of free single rooms: 0 | Number of free double rooms: 15
+--------------------
+Guest with: <id> = 13 <gender> = Female got a room with
+Type : Double
+ID : 2
+Number of free single rooms: 0 | Number of free double rooms: 14
+--------------------
+New guest with: <id> = 14 <gender> = Male trying to stay in the hotel
+Number of free single rooms: 0 | Number of free double rooms: 14
+--------------------
+Guest with: <id> = 14 <gender> = Male got a room with
+Type : Double
+ID : 1
+Number of free single rooms: 0 | Number of free double rooms: 13
+--------------------
+New guest with: <id> = 15 <gender> = Female trying to stay in the hotel
+Number of free single rooms: 0 | Number of free double rooms: 13
+--------------------
+Guest with: <id> = 15 <gender> = Female got a room with
+Type : Double
+ID : 3
+Number of free single rooms: 0 | Number of free double rooms: 13
+--------------------
+New guest with: <id> = 16 <gender> = Male trying to stay in the hotel
+Number of free single rooms: 0 | Number of free double rooms: 13
+--------------------
+Guest with: <id> = 16 <gender> = Male got a room with
+Type : Double
+ID : 4
+Number of free single rooms: 0 | Number of free double rooms: 13
+--------------------
+New guest with: <id> = 17 <gender> = Male trying to stay in the hotel
+Number of free single rooms: 0 | Number of free double rooms: 13
+--------------------
+Guest with: <id> = 17 <gender> = Male got a room with
+Type : Double
+ID : 4
+Number of free single rooms: 0 | Number of free double rooms: 12
+--------------------
+New guest with: <id> = 18 <gender> = Female trying to stay in the hotel
+Number of free single rooms: 0 | Number of free double rooms: 12
+--------------------
+Guest with: <id> = 18 <gender> = Female got a room with
+Type : Double
+ID : 3
+Number of free single rooms: 0 | Number of free double rooms: 11
+--------------------
+New guest with: <id> = 19 <gender> = Male trying to stay in the hotel
+Number of free single rooms: 0 | Number of free double rooms: 11
+--------------------
+Guest with: <id> = 19 <gender> = Male got a room with
+Type : Double
+ID : 5
+Number of free single rooms: 0 | Number of free double rooms: 11
+--------------------
+New guest with: <id> = 20 <gender> = Male trying to stay in the hotel
+Number of free single rooms: 0 | Number of free double rooms: 11
+--------------------
+Guest with: <id> = 20 <gender> = Male got a room with
+Type : Double
+ID : 5
+Number of free single rooms: 0 | Number of free double rooms: 10
+--------------------
+New guest with: <id> = 21 <gender> = Female trying to stay in the hotel
+Number of free single rooms: 0 | Number of free double rooms: 10
+--------------------
+Guest with: <id> = 21 <gender> = Female got a room with
+Type : Double
+ID : 6
+Number of free single rooms: 0 | Number of free double rooms: 10
+--------------------
+New guest with: <id> = 22 <gender> = Male trying to stay in the hotel
+Number of free single rooms: 0 | Number of free double rooms: 10
+--------------------
+Guest with: <id> = 22 <gender> = Male got a room with
+Type : Double
+ID : 7
+Number of free single rooms: 0 | Number of free double rooms: 10
+--------------------
+New guest with: <id> = 23 <gender> = Female trying to stay in the hotel
+Number of free single rooms: 0 | Number of free double rooms: 10
+--------------------
+Guest with: <id> = 23 <gender> = Female got a room with
+Type : Double
+ID : 6
+Number of free single rooms: 0 | Number of free double rooms: 9
+--------------------
+New guest with: <id> = 24 <gender> = Female trying to stay in the hotel
+Number of free single rooms: 0 | Number of free double rooms: 9
+--------------------
+Guest with: <id> = 24 <gender> = Female got a room with
+Type : Double
+ID : 8
+Number of free single rooms: 0 | Number of free double rooms: 9
+--------------------
+New guest with: <id> = 25 <gender> = Female trying to stay in the hotel
+Number of free single rooms: 0 | Number of free double rooms: 9
+--------------------
+Guest with: <id> = 25 <gender> = Female got a room with
+Type : Double
+ID : 8
+Number of free single rooms: 0 | Number of free double rooms: 8
+--------------------
+New guest with: <id> = 26 <gender> = Male trying to stay in the hotel
+Number of free single rooms: 0 | Number of free double rooms: 8
+--------------------
+Guest with: <id> = 26 <gender> = Male got a room with
+Type : Double
+ID : 7
+Number of free single rooms: 0 | Number of free double rooms: 7
+--------------------
+New guest with: <id> = 27 <gender> = Female trying to stay in the hotel
+Number of free single rooms: 0 | Number of free double rooms: 7
+--------------------
+Guest with: <id> = 27 <gender> = Female got a room with
+Type : Double
+ID : 9
+Number of free single rooms: 0 | Number of free double rooms: 7
+--------------------
+New guest with: <id> = 28 <gender> = Female trying to stay in the hotel
+Number of free single rooms: 0 | Number of free double rooms: 7
+--------------------
+Guest with: <id> = 28 <gender> = Female got a room with
+Type : Double
+ID : 9
+Number of free single rooms: 0 | Number of free double rooms: 6
+--------------------
+New guest with: <id> = 29 <gender> = Male trying to stay in the hotel
+Number of free single rooms: 0 | Number of free double rooms: 6
+--------------------
+Guest with: <id> = 29 <gender> = Male got a room with
+Type : Double
+ID : 10
+Number of free single rooms: 0 | Number of free double rooms: 6
+--------------------
+New guest with: <id> = 30 <gender> = Male trying to stay in the hotel
+Number of free single rooms: 0 | Number of free double rooms: 6
+--------------------
+Guest with: <id> = 30 <gender> = Male got a room with
+Type : Double
+ID : 10
+Number of free single rooms: 0 | Number of free double rooms: 5
+--------------------
+Guest with: <id> = 11 <gender> = Male left a room with
+Type : Double
+ID : 1
+Number of free single rooms: 0 | Number of free double rooms: 5
+--------------------
+Guest with: <id> = 12 <gender> = Female left a room with
+Type : Double
+ID : 2
+Number of free single rooms: 0 | Number of free double rooms: 5
+--------------------
+Guest with: <id> = 13 <gender> = Female left a room with
+Type : Double
+ID : 2
+Number of free single rooms: 0 | Number of free double rooms: 6
+--------------------
+Guest with: <id> = 14 <gender> = Male left a room with
+Type : Double
+ID : 1
+Number of free single rooms: 0 | Number of free double rooms: 7
+--------------------
+Guest with: <id> = 15 <gender> = Female left a room with
+Type : Double
+ID : 3
+Number of free single rooms: 0 | Number of free double rooms: 7
+--------------------
+Guest with: <id> = 16 <gender> = Male left a room with
+Type : Double
+ID : 4
+Number of free single rooms: 0 | Number of free double rooms: 7
+--------------------
+Guest with: <id> = 17 <gender> = Male left a room with
+Type : Double
+ID : 4
+Number of free single rooms: 0 | Number of free double rooms: 8
+--------------------
+Guest with: <id> = 18 <gender> = Female left a room with
+Type : Double
+ID : 3
+Number of free single rooms: 0 | Number of free double rooms: 9
+--------------------
+Guest with: <id> = 19 <gender> = Male left a room with
+Type : Double
+ID : 5
+Number of free single rooms: 0 | Number of free double rooms: 9
+--------------------
+Guest with: <id> = 20 <gender> = Male left a room with
+Type : Double
+ID : 5
+Number of free single rooms: 0 | Number of free double rooms: 10
+--------------------
+Guest with: <id> = 21 <gender> = Female left a room with
+Type : Double
+ID : 6
+Number of free single rooms: 0 | Number of free double rooms: 10
+--------------------
+Guest with: <id> = 22 <gender> = Male left a room with
+Type : Double
+ID : 7
+Number of free single rooms: 0 | Number of free double rooms: 10
+--------------------
+Guest with: <id> = 23 <gender> = Female left a room with
+Type : Double
+ID : 6
+Number of free single rooms: 0 | Number of free double rooms: 11
+--------------------
+Guest with: <id> = 24 <gender> = Female left a room with
+Type : Double
+ID : 8
+Number of free single rooms: 0 | Number of free double rooms: 11
+--------------------
+Guest with: <id> = 25 <gender> = Female left a room with
+Type : Double
+ID : 8
+Number of free single rooms: 0 | Number of free double rooms: 12
+--------------------
+Guest with: <id> = 26 <gender> = Male left a room with
+Type : Double
+ID : 7
+Number of free single rooms: 0 | Number of free double rooms: 13
+--------------------
+Guest with: <id> = 27 <gender> = Female left a room with
+Type : Double
+ID : 9
+Number of free single rooms: 0 | Number of free double rooms: 13
+--------------------
+Guest with: <id> = 28 <gender> = Female left a room with
+Type : Double
+ID : 9
+Number of free single rooms: 0 | Number of free double rooms: 14
+--------------------
+Guest with: <id> = 29 <gender> = Male left a room with
+Type : Double
+ID : 10
+Number of free single rooms: 0 | Number of free double rooms: 14
+--------------------
+Guest with: <id> = 30 <gender> = Male left a room with
+Type : Double
+ID : 10
+Number of free single rooms: 0 | Number of free double rooms: 15
+--------------------
+Guest with: <id> = 1 <gender> = Male left a room with
+Type : Single
+ID : 1
+Number of free single rooms: 1 | Number of free double rooms: 15
+--------------------
+Guest with: <id> = 2 <gender> = Male left a room with
+Type : Single
+ID : 2
+Number of free single rooms: 2 | Number of free double rooms: 15
+--------------------
+Guest with: <id> = 3 <gender> = Male left a room with
+Type : Single
+ID : 3
+Number of free single rooms: 3 | Number of free double rooms: 15
+--------------------
+Guest with: <id> = 4 <gender> = Male left a room with
+Type : Single
+ID : 4
+Number of free single rooms: 4 | Number of free double rooms: 15
+--------------------
+Guest with: <id> = 5 <gender> = Female left a room with
+Type : Single
+ID : 5
+Number of free single rooms: 5 | Number of free double rooms: 15
+--------------------
+Guest with: <id> = 6 <gender> = Female left a room with
+Type : Single
+ID : 6
+Number of free single rooms: 6 | Number of free double rooms: 15
+--------------------
+Guest with: <id> = 7 <gender> = Male left a room with
+Type : Single
+ID : 7
+Number of free single rooms: 7 | Number of free double rooms: 15
+--------------------
+Guest with: <id> = 8 <gender> = Male left a room with
+Type : Single
+ID : 8
+Number of free single rooms: 8 | Number of free double rooms: 15
+--------------------
+Guest with: <id> = 9 <gender> = Female left a room with
+Type : Single
+ID : 9
+Number of free single rooms: 9 | Number of free double rooms: 15
+--------------------
+Guest with: <id> = 10 <gender> = Female left a room with
+Type : Single
+ID : 10
+Number of free single rooms: 10 | Number of free double rooms: 15

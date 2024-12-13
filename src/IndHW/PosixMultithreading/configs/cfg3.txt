@@ -1,5 +1,5 @@
-guestNumber=100
-singleRoomStayTime=6000000
-doubleRoomStayTime=3000000
-newGuestArrivalTime=200000
+guestNumber=90
+singleRoomStayTime=800000
+doubleRoomStayTime=600000
+newGuestArrivalTime=50000
 logFilePath=../logs/log_3.txt
