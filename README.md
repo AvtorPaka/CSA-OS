@@ -1,1 +1,1 @@
-## RISC-V Architecture Course
+## Computing systems architecture & OS Course || HSE SE 2 course 
