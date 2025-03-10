@@ -1,0 +1,2 @@
+Vowel count: 236
+Consonant count: 343
