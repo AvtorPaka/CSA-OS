@@ -1,0 +1,467 @@
+[7189] | Semaphore for path: ipc/sem/philosopher_mutex_sem created and have id: 327688
+[7189] | Semaphore for path: ipc/sem/philosopher_waiter_sem created and have id: 327689
+[7189] | Process-philosopher got number: 1
+[7189] | There are 4 more free sits at the table.Process joining the table.
+[7189] | Semaphore for path: ipc/sem/philosopher_fork_0 created and have id: 327690
+[7189] | Left fork-semaphore has path: ipc/sem/philosopher_fork_0 ,id : 327690
+[7189] | Semaphore for path: ipc/sem/philosopher_fork_1 created and have id: 327691
+[7189] | Right fork-semaphore has name: ipc/sem/philosopher_fork_1 ,id : 327691
+[7189] | Trying to get permission from the waiter to grab forks.
+[7189] | Got permission from the waiter to grab forks.
+[7189] | Trying to grab left fork: 327690
+[7189] | Grab left fork 327690
+[7189] | Trying to grab right fork: 327691
+[7189] | Grab right fork: 327691
+[7189] | Start eating.
+[7191] | Process-philosopher got number: 2
+[7191] | There are 3 more free sits at the table.Process joining the table.
+[7191] | Left fork-semaphore has path: ipc/sem/philosopher_fork_1 ,id : 327691
+[7191] | Semaphore for path: ipc/sem/philosopher_fork_2 created and have id: 262156
+[7191] | Right fork-semaphore has name: ipc/sem/philosopher_fork_2 ,id : 262156
+[7191] | Trying to get permission from the waiter to grab forks.
+[7191] | Got permission from the waiter to grab forks.
+[7191] | Trying to grab left fork: 327691
+[7193] | Process-philosopher got number: 3
+[7193] | There are 2 more free sits at the table.Process joining the table.
+[7193] | Left fork-semaphore has path: ipc/sem/philosopher_fork_2 ,id : 262156
+[7193] | Semaphore for path: ipc/sem/philosopher_fork_3 created and have id: 196621
+[7193] | Right fork-semaphore has name: ipc/sem/philosopher_fork_3 ,id : 196621
+[7193] | Trying to get permission from the waiter to grab forks.
+[7193] | Got permission from the waiter to grab forks.
+[7193] | Trying to grab left fork: 262156
+[7193] | Grab left fork 262156
+[7193] | Trying to grab right fork: 196621
+[7193] | Grab right fork: 196621
+[7193] | Start eating.
+[7192] | Process-philosopher got number: 4
+[7192] | There are 1 more free sits at the table.Process joining the table.
+[7192] | Left fork-semaphore has path: ipc/sem/philosopher_fork_3 ,id : 196621
+[7192] | Semaphore for path: ipc/sem/philosopher_fork_4 created and have id: 196622
+[7192] | Right fork-semaphore has name: ipc/sem/philosopher_fork_4 ,id : 196622
+[7192] | Trying to get permission from the waiter to grab forks.
+[7192] | Got permission from the waiter to grab forks.
+[7192] | Trying to grab left fork: 196621
+[7190] | Process-philosopher got number: 5
+[7190] | There are 0 more free sits at the table.Process joining the table.
+[7190] | Left fork-semaphore has path: ipc/sem/philosopher_fork_4 ,id : 196622
+[7190] | Right fork-semaphore has name: ipc/sem/philosopher_fork_0 ,id : 327690
+[7190] | Trying to get permission from the waiter to grab forks.
+[7193] | Done eating.
+[7193] | Release left fork: 262156
+[7193] | Release right fork: 196621
+[7193] | Start thinking.
+[7192] | Grab left fork 196621
+[7192] | Trying to grab right fork: 196622
+[7192] | Grab right fork: 196622
+[7192] | Start eating.
+[7190] | Got permission from the waiter to grab forks.
+[7190] | Trying to grab left fork: 196622
+[7189] | Done eating.
+[7189] | Release left fork: 327690
+[7189] | Release right fork: 327691
+[7189] | Start thinking.
+[7191] | Grab left fork 327691
+[7191] | Trying to grab right fork: 262156
+[7191] | Grab right fork: 262156
+[7191] | Start eating.
+[7191] | Done eating.
+[7191] | Release left fork: 327691
+[7191] | Release right fork: 262156
+[7191] | Start thinking.
+[7193] | Done thinking.
+[7193] | Trying to get permission from the waiter to grab forks.
+[7193] | Got permission from the waiter to grab forks.
+[7193] | Trying to grab left fork: 262156
+[7193] | Grab left fork 262156
+[7193] | Trying to grab right fork: 196621
+[7192] | Done eating.
+[7192] | Release left fork: 196621
+[7192] | Release right fork: 196622
+[7192] | Start thinking.
+[7193] | Grab right fork: 196621
+[7193] | Start eating.
+[7190] | Grab left fork 196622
+[7190] | Trying to grab right fork: 327690
+[7190] | Grab right fork: 327690
+[7190] | Start eating.
+[7191] | Done thinking.
+[7191] | Trying to get permission from the waiter to grab forks.
+[7191] | Got permission from the waiter to grab forks.
+[7191] | Trying to grab left fork: 327691
+[7191] | Grab left fork 327691
+[7191] | Trying to grab right fork: 262156
+[7189] | Done thinking.
+[7189] | Trying to get permission from the waiter to grab forks.
+[7189] | Got permission from the waiter to grab forks.
+[7189] | Trying to grab left fork: 327690
+[7190] | Done eating.
+[7190] | Release left fork: 196622
+[7190] | Release right fork: 327690
+[7190] | Start thinking.
+[7189] | Grab left fork 327690
+[7189] | Trying to grab right fork: 327691
+[7192] | Done thinking.
+[7192] | Trying to get permission from the waiter to grab forks.
+[7192] | Got permission from the waiter to grab forks.
+[7192] | Trying to grab left fork: 196621
+[7193] | Done eating.
+[7193] | Release left fork: 262156
+[7193] | Release right fork: 196621
+[7193] | Start thinking.
+[7191] | Grab right fork: 262156
+[7191] | Start eating.
+[7192] | Grab left fork 196621
+[7192] | Trying to grab right fork: 196622
+[7192] | Grab right fork: 196622
+[7192] | Start eating.
+[7190] | Done thinking.
+[7190] | Trying to get permission from the waiter to grab forks.
+[7190] | Got permission from the waiter to grab forks.
+[7190] | Trying to grab left fork: 196622
+[7191] | Done eating.
+[7191] | Release left fork: 327691
+[7191] | Release right fork: 262156
+[7191] | Start thinking.
+[7189] | Grab right fork: 327691
+[7189] | Start eating.
+[7193] | Done thinking.
+[7193] | Trying to get permission from the waiter to grab forks.
+[7193] | Got permission from the waiter to grab forks.
+[7193] | Trying to grab left fork: 262156
+[7193] | Grab left fork 262156
+[7193] | Trying to grab right fork: 196621
+[7192] | Done eating.
+[7192] | Release left fork: 196621
+[7192] | Release right fork: 196622
+[7192] | Start thinking.
+[7193] | Grab right fork: 196621
+[7193] | Start eating.
+[7190] | Grab left fork 196622
+[7190] | Trying to grab right fork: 327690
+[7191] | Done thinking.
+[7191] | Trying to get permission from the waiter to grab forks.
+[7191] | Got permission from the waiter to grab forks.
+[7191] | Trying to grab left fork: 327691
+[7193] | Done eating.
+[7193] | Release left fork: 262156
+[7193] | Release right fork: 196621
+[7193] | Start thinking.
+[7189] | Done eating.
+[7189] | Release left fork: 327690
+[7189] | Release right fork: 327691
+[7189] | Start thinking.
+[7190] | Grab right fork: 327690
+[7190] | Start eating.
+[7191] | Grab left fork 327691
+[7191] | Trying to grab right fork: 262156
+[7191] | Grab right fork: 262156
+[7191] | Start eating.
+[7192] | Done thinking.
+[7192] | Trying to get permission from the waiter to grab forks.
+[7192] | Got permission from the waiter to grab forks.
+[7192] | Trying to grab left fork: 196621
+[7192] | Grab left fork 196621
+[7192] | Trying to grab right fork: 196622
+[7193] | Done thinking.
+[7193] | Trying to get permission from the waiter to grab forks.
+[7193] | Got permission from the waiter to grab forks.
+[7193] | Trying to grab left fork: 262156
+[7191] | Done eating.
+[7191] | Release left fork: 327691
+[7191] | Release right fork: 262156
+[7191] | Start thinking.
+[7193] | Grab left fork 262156
+[7193] | Trying to grab right fork: 196621
+[7189] | Done thinking.
+[7189] | Trying to get permission from the waiter to grab forks.
+[7189] | Got permission from the waiter to grab forks.
+[7189] | Trying to grab left fork: 327690
+[7190] | Done eating.
+[7190] | Release left fork: 196622
+[7190] | Release right fork: 327690
+[7190] | Start thinking.
+[7192] | Grab right fork: 196622
+[7192] | Start eating.
+[7189] | Grab left fork 327690
+[7189] | Trying to grab right fork: 327691
+[7189] | Grab right fork: 327691
+[7189] | Start eating.
+[7191] | Done thinking.
+[7191] | Trying to get permission from the waiter to grab forks.
+[7191] | Got permission from the waiter to grab forks.
+[7191] | Trying to grab left fork: 327691
+[7190] | Done thinking.
+[7190] | Trying to get permission from the waiter to grab forks.
+[7192] | Done eating.
+[7192] | Release left fork: 196621
+[7192] | Release right fork: 196622
+[7192] | Start thinking.
+[7193] | Grab right fork: 196621
+[7193] | Start eating.
+[7190] | Got permission from the waiter to grab forks.
+[7190] | Trying to grab left fork: 196622
+[7190] | Grab left fork 196622
+[7190] | Trying to grab right fork: 327690
+[7189] | Done eating.
+[7189] | Release left fork: 327690
+[7189] | Release right fork: 327691
+[7189] | Start thinking.
+[7190] | Grab right fork: 327690
+[7190] | Start eating.
+[7191] | Grab left fork 327691
+[7191] | Trying to grab right fork: 262156
+[7189] | Done thinking.
+[7189] | Trying to get permission from the waiter to grab forks.
+[7189] | Got permission from the waiter to grab forks.
+[7189] | Trying to grab left fork: 327690
+[7192] | Done thinking.
+[7192] | Trying to get permission from the waiter to grab forks.
+[7193] | Done eating.
+[7193] | Release left fork: 262156
+[7193] | Release right fork: 196621
+[7193] | Start thinking.
+[7191] | Grab right fork: 262156
+[7191] | Start eating.
+[7192] | Got permission from the waiter to grab forks.
+[7192] | Trying to grab left fork: 196621
+[7192] | Grab left fork 196621
+[7192] | Trying to grab right fork: 196622
+[7190] | Done eating.
+[7190] | Release left fork: 196622
+[7190] | Release right fork: 327690
+[7190] | Start thinking.
+[7192] | Grab right fork: 196622
+[7192] | Start eating.
+[7189] | Grab left fork 327690
+[7189] | Trying to grab right fork: 327691
+[7191] | Done eating.
+[7191] | Release left fork: 327691
+[7191] | Release right fork: 262156
+[7191] | Start thinking.
+[7189] | Grab right fork: 327691
+[7189] | Start eating.
+[7192] | Done eating.
+[7192] | Release left fork: 196621
+[7192] | Release right fork: 196622
+[7192] | Start thinking.
+[7189] | Done eating.
+[7189] | Release left fork: 327690
+[7189] | Release right fork: 327691
+[7189] | Start thinking.
+[7193] | Done thinking.
+[7193] | Trying to get permission from the waiter to grab forks.
+[7193] | Got permission from the waiter to grab forks.
+[7193] | Trying to grab left fork: 262156
+[7193] | Grab left fork 262156
+[7193] | Trying to grab right fork: 196621
+[7193] | Grab right fork: 196621
+[7193] | Start eating.
+[7190] | Done thinking.
+[7190] | Trying to get permission from the waiter to grab forks.
+[7190] | Got permission from the waiter to grab forks.
+[7190] | Trying to grab left fork: 196622
+[7190] | Grab left fork 196622
+[7190] | Trying to grab right fork: 327690
+[7190] | Grab right fork: 327690
+[7190] | Start eating.
+[7191] | Done thinking.
+[7191] | Trying to get permission from the waiter to grab forks.
+[7191] | Got permission from the waiter to grab forks.
+[7191] | Trying to grab left fork: 327691
+[7191] | Grab left fork 327691
+[7191] | Trying to grab right fork: 262156
+[7193] | Done eating.
+[7193] | Release left fork: 262156
+[7193] | Release right fork: 196621
+[7193] | Start thinking.
+[7191] | Grab right fork: 262156
+[7191] | Start eating.
+[7192] | Done thinking.
+[7192] | Trying to get permission from the waiter to grab forks.
+[7192] | Got permission from the waiter to grab forks.
+[7192] | Trying to grab left fork: 196621
+[7192] | Grab left fork 196621
+[7192] | Trying to grab right fork: 196622
+[7190] | Done eating.
+[7190] | Release left fork: 196622
+[7190] | Release right fork: 327690
+[7190] | Start thinking.
+[7192] | Grab right fork: 196622
+[7192] | Start eating.
+[7193] | Done thinking.
+[7193] | Trying to get permission from the waiter to grab forks.
+[7193] | Got permission from the waiter to grab forks.
+[7193] | Trying to grab left fork: 262156
+[7189] | Done thinking.
+[7189] | Trying to get permission from the waiter to grab forks.
+[7189] | Got permission from the waiter to grab forks.
+[7189] | Trying to grab left fork: 327690
+[7189] | Grab left fork 327690
+[7189] | Trying to grab right fork: 327691
+[7191] | Done eating.
+[7191] | Release left fork: 327691
+[7191] | Release right fork: 262156
+[7191] | Start thinking.
+[7189] | Grab right fork: 327691
+[7189] | Start eating.
+[7193] | Grab left fork 262156
+[7193] | Trying to grab right fork: 196621
+[7192] | Done eating.
+[7192] | Release left fork: 196621
+[7192] | Release right fork: 196622
+[7192] | Start thinking.
+[7193] | Grab right fork: 196621
+[7193] | Start eating.
+[7190] | Done thinking.
+[7190] | Trying to get permission from the waiter to grab forks.
+[7190] | Got permission from the waiter to grab forks.
+[7190] | Trying to grab left fork: 196622
+[7190] | Grab left fork 196622
+[7190] | Trying to grab right fork: 327690
+[7189] | Done eating.
+[7189] | Release left fork: 327690
+[7189] | Release right fork: 327691
+[7189] | Start thinking.
+[7190] | Grab right fork: 327690
+[7190] | Start eating.
+[7192] | Done thinking.
+[7192] | Trying to get permission from the waiter to grab forks.
+[7192] | Got permission from the waiter to grab forks.
+[7192] | Trying to grab left fork: 196621
+[7191] | Done thinking.
+[7191] | Trying to get permission from the waiter to grab forks.
+[7191] | Got permission from the waiter to grab forks.
+[7191] | Trying to grab left fork: 327691
+[7191] | Grab left fork 327691
+[7191] | Trying to grab right fork: 262156
+[7193] | Done eating.
+[7193] | Release left fork: 262156
+[7193] | Release right fork: 196621
+[7193] | Start thinking.
+[7191] | Grab right fork: 262156
+[7191] | Start eating.
+[7192] | Grab left fork 196621
+[7192] | Trying to grab right fork: 196622
+[7190] | Done eating.
+[7190] | Release left fork: 196622
+[7190] | Release right fork: 327690
+[7190] | Start thinking.
+[7192] | Grab right fork: 196622
+[7192] | Start eating.
+[7189] | Done thinking.
+[7189] | Trying to get permission from the waiter to grab forks.
+[7189] | Got permission from the waiter to grab forks.
+[7189] | Trying to grab left fork: 327690
+[7189] | Grab left fork 327690
+[7189] | Trying to grab right fork: 327691
+[7190] | Done thinking.
+[7190] | Trying to get permission from the waiter to grab forks.
+[7190] | Got permission from the waiter to grab forks.
+[7190] | Trying to grab left fork: 196622
+[7193] | Done thinking.
+[7193] | Trying to get permission from the waiter to grab forks.
+[7192] | Done eating.
+[7192] | Release left fork: 196621
+[7192] | Release right fork: 196622
+[7192] | Start thinking.
+[7190] | Grab left fork 196622
+[7190] | Trying to grab right fork: 327690
+[7193] | Got permission from the waiter to grab forks.
+[7193] | Trying to grab left fork: 262156
+[7191] | Done eating.
+[7191] | Release left fork: 327691
+[7191] | Release right fork: 262156
+[7191] | Start thinking.
+[7189] | Grab right fork: 327691
+[7189] | Start eating.
+[7193] | Grab left fork 262156
+[7193] | Trying to grab right fork: 196621
+[7193] | Grab right fork: 196621
+[7193] | Start eating.
+[7191] | Done thinking.
+[7191] | Trying to get permission from the waiter to grab forks.
+[7191] | Got permission from the waiter to grab forks.
+[7191] | Trying to grab left fork: 327691
+[7192] | Done thinking.
+[7192] | Trying to get permission from the waiter to grab forks.
+[7193] | Done eating.
+[7193] | Release left fork: 262156
+[7193] | Release right fork: 196621
+[7193] | Start thinking.
+[7192] | Got permission from the waiter to grab forks.
+[7192] | Trying to grab left fork: 196621
+[7192] | Grab left fork 196621
+[7192] | Trying to grab right fork: 196622
+[7189] | Done eating.
+[7189] | Release left fork: 327690
+[7189] | Release right fork: 327691
+[7189] | Start thinking.
+[7190] | Grab right fork: 327690
+[7190] | Start eating.
+[7191] | Grab left fork 327691
+[7191] | Trying to grab right fork: 262156
+[7191] | Grab right fork: 262156
+[7191] | Start eating.
+[7193] | Done thinking.
+[7193] | Trying to get permission from the waiter to grab forks.
+[7193] | Got permission from the waiter to grab forks.
+[7193] | Trying to grab left fork: 262156
+[7190] | Done eating.
+[7190] | Release left fork: 196622
+[7190] | Release right fork: 327690
+[7190] | Start thinking.
+[7192] | Grab right fork: 196622
+[7192] | Start eating.
+[7189] | Done thinking.
+[7189] | Trying to get permission from the waiter to grab forks.
+[7189] | Got permission from the waiter to grab forks.
+[7189] | Trying to grab left fork: 327690
+[7189] | Grab left fork 327690
+[7189] | Trying to grab right fork: 327691
+[7191] | Done eating.
+[7191] | Release left fork: 327691
+[7191] | Release right fork: 262156
+[7191] | Start thinking.
+[7189] | Grab right fork: 327691
+[7189] | Start eating.
+[7193] | Grab left fork 262156
+[7193] | Trying to grab right fork: 196621
+[7192] | Done eating.
+[7192] | Release left fork: 196621
+[7192] | Release right fork: 196622
+[7192] | Start thinking.
+[7193] | Grab right fork: 196621
+[7193] | Start eating.
+[7190] | Done thinking.
+[7190] | Trying to get permission from the waiter to grab forks.
+[7190] | Got permission from the waiter to grab forks.
+[7190] | Trying to grab left fork: 196622
+[7190] | Grab left fork 196622
+[7190] | Trying to grab right fork: 327690
+[7192] | Done thinking.
+[7192] | Trying to get permission from the waiter to grab forks.
+[7192] | Got permission from the waiter to grab forks.
+[7192] | Trying to grab left fork: 196621
+[7192] | Signal received. Leaving table. Ate 7 times. Thought 7 times.
+[7192] | Releasing awaited waiter semaphore: 327689
+[7193] | Signal received. Leaving table. Ate 7 times. Thought 7 times.
+[7193] | Releasing awaited right fork semaphore: 196621
+[7193] | Releasing awaited left fork semaphore: 262156
+[7193] | Releasing awaited waiter semaphore: 327689
+[7191] | Signal received. Leaving table. Ate 7 times. Thought 6 times.
+[7189] | Signal received. Leaving table. Ate 6 times. Thought 6 times.
+[7190] | Signal received. Leaving table. Ate 6 times. Thought 6 times.
+[7189] | Releasing awaited right fork semaphore: 327691
+[7190] | Releasing awaited left fork semaphore: 196622
+[7189] | Releasing awaited left fork semaphore: 327690
+[7190] | Releasing awaited waiter semaphore: 327689
+[7189] | Releasing awaited waiter semaphore: 327689
+[7189] | I'm the last process on the table, start cleaning system.
+[7189] | Semaphore with id: 327688 deleted from system.
+[7189] | Semaphore with id: 327689 deleted from system.
+[7189] | Semaphore with id: 327690 deleted from system.
+[7189] | Semaphore with id: 327691 deleted from system.
+[7189] | Semaphore with id: 262156 deleted from system.
+[7189] | Semaphore with id: 196621 deleted from system.
+[7189] | Semaphore with id: 196622 deleted from system.
+[7189] | SystemV ipc shared memory with id: 327681 deleted from system.

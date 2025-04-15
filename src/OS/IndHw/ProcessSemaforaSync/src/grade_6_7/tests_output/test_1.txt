@@ -1,0 +1,201 @@
+[98556] | Shared memory with name: /philosopher-shared-mem, id: 3 size set to 32
+[98556] | Process-philosopher got number: 1
+[98556] | There are 4 more free sits at the table.Process joining the table.
+[98556] | Left fork-semaphore has index: 0
+[98556] | Right fork-semaphore has index: 1
+[98556] | Trying to get permission from the waiter to grab forks.
+[98556] | Got permission from the waiter to grab forks.
+[98556] | Trying to grab left fork with idx: 0
+[98556] | Grab left fork with idx: 0
+[98556] | Trying to grab right fork with idx: 1
+[98556] | Grab right fork with idx: 1
+[98556] | Start eating.
+[98557] | Process-philosopher got number: 2
+[98557] | There are 3 more free sits at the table.Process joining the table.
+[98557] | Left fork-semaphore has index: 1
+[98557] | Right fork-semaphore has index: 2
+[98557] | Trying to get permission from the waiter to grab forks.
+[98557] | Got permission from the waiter to grab forks.
+[98557] | Trying to grab left fork with idx: 1
+[98557] | Grab left fork with idx: 1
+[98557] | Trying to grab right fork with idx: 2
+[98557] | Grab right fork with idx: 2
+[98557] | Start eating.
+[98560] | Process-philosopher got number: 5
+[98558] | Process-philosopher got number: 3
+[98559] | Process-philosopher got number: 4
+[98558] | There are 2 more free sits at the table.Process joining the table.
+[98558] | Left fork-semaphore has index: 2
+[98559] | There are 1 more free sits at the table.Process joining the table.
+[98558] | Right fork-semaphore has index: 3
+[98559] | Left fork-semaphore has index: 3
+[98558] | Trying to get permission from the waiter to grab forks.
+[98559] | Right fork-semaphore has index: 4
+[98558] | Got permission from the waiter to grab forks.
+[98559] | Trying to get permission from the waiter to grab forks.
+[98558] | Trying to grab left fork with idx: 2
+[98559] | Got permission from the waiter to grab forks.
+[98558] | Grab left fork with idx: 2
+[98559] | Trying to grab left fork with idx: 3
+[98558] | Trying to grab right fork with idx: 3
+[98559] | Grab left fork with idx: 3
+[98559] | Trying to grab right fork with idx: 4
+[98558] | Grab right fork with idx: 3
+[98558] | Start eating.
+[98560] | There are 0 more free sits at the table.Process joining the table.
+[98560] | Left fork-semaphore has index: 4
+[98560] | Right fork-semaphore has index: 0
+[98560] | Trying to get permission from the waiter to grab forks.
+[98560] | Got permission from the waiter to grab forks.
+[98560] | Trying to grab left fork with idx: 4
+[98560] | Grab left fork with idx: 4
+[98559] | Grab right fork with idx: 4
+[98560] | Trying to grab right fork with idx: 0
+[98560] | Grab right fork with idx: 0
+[98559] | Start eating.
+[98560] | Start eating.
+[98558] | Done eating.
+[98558] | Release left fork with idx: 2
+[98558] | Release right fork with idx: 3
+[98558] | Start thinking.
+[98560] | Done eating.
+[98560] | Release left fork with idx: 4
+[98560] | Release right fork with idx: 0
+[98560] | Start thinking.
+[98556] | Done eating.
+[98556] | Release left fork with idx: 0
+[98556] | Release right fork with idx: 1
+[98556] | Start thinking.
+[98557] | Done eating.
+[98557] | Release left fork with idx: 1
+[98557] | Release right fork with idx: 2
+[98557] | Start thinking.
+[98559] | Done eating.
+[98559] | Release left fork with idx: 3
+[98559] | Release right fork with idx: 4
+[98559] | Start thinking.
+[98560] | Done thinking.
+[98560] | Trying to get permission from the waiter to grab forks.
+[98560] | Got permission from the waiter to grab forks.
+[98560] | Trying to grab left fork with idx: 4
+[98560] | Grab left fork with idx: 4
+[98560] | Trying to grab right fork with idx: 0
+[98560] | Grab right fork with idx: 0
+[98560] | Start eating.
+[98558] | Done thinking.
+[98558] | Trying to get permission from the waiter to grab forks.
+[98558] | Got permission from the waiter to grab forks.
+[98558] | Trying to grab left fork with idx: 2
+[98558] | Grab left fork with idx: 2
+[98558] | Trying to grab right fork with idx: 3
+[98558] | Grab right fork with idx: 3
+[98558] | Start eating.
+[98557] | Done thinking.
+[98557] | Trying to get permission from the waiter to grab forks.
+[98557] | Got permission from the waiter to grab forks.
+[98557] | Trying to grab left fork with idx: 1
+[98557] | Grab left fork with idx: 1
+[98557] | Trying to grab right fork with idx: 2
+[98557] | Grab right fork with idx: 2
+[98557] | Start eating.
+[98556] | Done thinking.
+[98556] | Trying to get permission from the waiter to grab forks.
+[98556] | Got permission from the waiter to grab forks.
+[98556] | Trying to grab left fork with idx: 0
+[98556] | Grab left fork with idx: 0
+[98556] | Trying to grab right fork with idx: 1
+[98556] | Grab right fork with idx: 1
+[98556] | Start eating.
+[98558] | Done eating.
+[98558] | Release left fork with idx: 2
+[98558] | Release right fork with idx: 3
+[98558] | Start thinking.
+[98560] | Done eating.
+[98560] | Release left fork with idx: 4
+[98560] | Release right fork with idx: 0
+[98560] | Start thinking.
+[98559] | Done thinking.
+[98559] | Trying to get permission from the waiter to grab forks.
+[98559] | Got permission from the waiter to grab forks.
+[98559] | Trying to grab left fork with idx: 3
+[98559] | Grab left fork with idx: 3
+[98559] | Trying to grab right fork with idx: 4
+[98559] | Grab right fork with idx: 4
+[98559] | Start eating.
+[98556] | Done eating.
+[98556] | Release left fork with idx: 0
+[98556] | Release right fork with idx: 1
+[98556] | Start thinking.
+[98557] | Done eating.
+[98557] | Release left fork with idx: 1
+[98557] | Release right fork with idx: 2
+[98557] | Start thinking.
+[98560] | Done thinking.
+[98560] | Trying to get permission from the waiter to grab forks.
+[98560] | Got permission from the waiter to grab forks.
+[98560] | Trying to grab left fork with idx: 4
+[98560] | Grab left fork with idx: 4
+[98560] | Trying to grab right fork with idx: 0
+[98560] | Grab right fork with idx: 0
+[98560] | Start eating.
+[98558] | Done thinking.
+[98558] | Trying to get permission from the waiter to grab forks.
+[98558] | Got permission from the waiter to grab forks.
+[98558] | Trying to grab left fork with idx: 2
+[98558] | Grab left fork with idx: 2
+[98558] | Trying to grab right fork with idx: 3
+[98558] | Grab right fork with idx: 3
+[98558] | Start eating.
+[98559] | Done eating.
+[98559] | Release left fork with idx: 3
+[98559] | Release right fork with idx: 4
+[98559] | Start thinking.
+[98556] | Done thinking.
+[98556] | Trying to get permission from the waiter to grab forks.
+[98556] | Got permission from the waiter to grab forks.
+[98556] | Trying to grab left fork with idx: 0
+[98556] | Grab left fork with idx: 0
+[98556] | Trying to grab right fork with idx: 1
+[98556] | Grab right fork with idx: 1
+[98556] | Start eating.
+[98557] | Done thinking.
+[98557] | Trying to get permission from the waiter to grab forks.
+[98557] | Got permission from the waiter to grab forks.
+[98557] | Trying to grab left fork with idx: 1
+[98557] | Grab left fork with idx: 1
+[98557] | Trying to grab right fork with idx: 2
+[98557] | Grab right fork with idx: 2
+[98557] | Start eating.
+[98558] | Done eating.
+[98558] | Release left fork with idx: 2
+[98558] | Release right fork with idx: 3
+[98558] | Start thinking.
+[98559] | Done thinking.
+[98559] | Trying to get permission from the waiter to grab forks.
+[98559] | Got permission from the waiter to grab forks.
+[98559] | Trying to grab left fork with idx: 3
+[98559] | Grab left fork with idx: 3
+[98559] | Trying to grab right fork with idx: 4
+[98559] | Grab right fork with idx: 4
+[98559] | Start eating.
+[98560] | Done eating.
+[98560] | Release left fork with idx: 4
+[98560] | Release right fork with idx: 0
+[98560] | Start thinking.
+[98556] | Done eating.
+[98556] | Release left fork with idx: 0
+[98556] | Release right fork with idx: 1
+[98556] | Start thinking.
+[98560] | Signal received. Leaving table. Ate 3 times. Thought 2 times.
+[98559] | Signal received. Leaving table. Ate 2 times. Thought 2 times.
+[98558] | Signal received. Leaving table. Ate 3 times. Thought 2 times.
+[98557] | Signal received. Leaving table. Ate 2 times. Thought 2 times.
+[98559] | Releasing awaited right fork semaphore: 4
+[98557] | Releasing awaited right fork semaphore: 2
+[98559] | Releasing awaited left fork semaphore: 3
+[98557] | Releasing awaited left fork semaphore: 1
+[98559] | Releasing awaited waiter semaphore
+[98556] | Signal received. Leaving table. Ate 3 times. Thought 2 times.
+[98557] | Releasing awaited waiter semaphore
+[98557] | I'm the last process on the table, start cleaning system.
+[98557] | Shared memory with name: /philosopher-shared-mem deleted from system.

@@ -1,0 +1,230 @@
+[86790] | Shared memory with name: /philosopher-shared-mem, id: 5 size set to 4
+[86790] | Process-philosopher got number: 1
+[86790] | There are 4 more free sits at the table.Process joining the table.
+[86790] | Left fork-semaphore has name: /philosopher-fork-semaphore-0
+[86790] | Right fork-semaphore has name: /philosopher-fork-semaphore-1
+[86790] | Trying to get permission from the waiter to grab forks.
+[86790] | Got permission from the waiter to grab forks.
+[86790] | Trying to grab left fork /philosopher-fork-semaphore-0
+[86790] | Grab left fork /philosopher-fork-semaphore-0
+[86790] | Trying to grab right fork /philosopher-fork-semaphore-1
+[86790] | Grab right fork /philosopher-fork-semaphore-1
+[86790] | Start eating.
+[86791] | Process-philosopher got number: 2
+[86791] | There are 3 more free sits at the table.Process joining the table.
+[86791] | Left fork-semaphore has name: /philosopher-fork-semaphore-1
+[86791] | Right fork-semaphore has name: /philosopher-fork-semaphore-2
+[86791] | Trying to get permission from the waiter to grab forks.
+[86791] | Got permission from the waiter to grab forks.
+[86791] | Trying to grab left fork /philosopher-fork-semaphore-1
+[86792] | Process-philosopher got number: 3
+[86792] | There are 2 more free sits at the table.Process joining the table.
+[86792] | Left fork-semaphore has name: /philosopher-fork-semaphore-2
+[86792] | Right fork-semaphore has name: /philosopher-fork-semaphore-3
+[86792] | Trying to get permission from the waiter to grab forks.
+[86792] | Got permission from the waiter to grab forks.
+[86792] | Trying to grab left fork /philosopher-fork-semaphore-2
+[86792] | Grab left fork /philosopher-fork-semaphore-2
+[86792] | Trying to grab right fork /philosopher-fork-semaphore-3
+[86792] | Grab right fork /philosopher-fork-semaphore-3
+[86792] | Start eating.
+[86793] | Process-philosopher got number: 4
+[86793] | There are 1 more free sits at the table.Process joining the table.
+[86793] | Left fork-semaphore has name: /philosopher-fork-semaphore-3
+[86793] | Right fork-semaphore has name: /philosopher-fork-semaphore-4
+[86793] | Trying to get permission from the waiter to grab forks.
+[86793] | Got permission from the waiter to grab forks.
+[86793] | Trying to grab left fork /philosopher-fork-semaphore-3
+[86794] | Process-philosopher got number: 5
+[86794] | There are 0 more free sits at the table.Process joining the table.
+[86794] | Left fork-semaphore has name: /philosopher-fork-semaphore-4
+[86794] | Right fork-semaphore has name: /philosopher-fork-semaphore-0
+[86794] | Trying to get permission from the waiter to grab forks.
+[86792] | Done eating.
+[86792] | Release left fork /philosopher-fork-semaphore-2
+[86792] | Release right fork /philosopher-fork-semaphore-3
+[86792] | Start thinking.
+[86793] | Grab left fork /philosopher-fork-semaphore-3
+[86793] | Trying to grab right fork /philosopher-fork-semaphore-4
+[86793] | Grab right fork /philosopher-fork-semaphore-4
+[86793] | Start eating.
+[86794] | Got permission from the waiter to grab forks.
+[86794] | Trying to grab left fork /philosopher-fork-semaphore-4
+[86790] | Done eating.
+[86790] | Release left fork /philosopher-fork-semaphore-0
+[86790] | Release right fork /philosopher-fork-semaphore-1
+[86790] | Start thinking.
+[86791] | Grab left fork /philosopher-fork-semaphore-1
+[86791] | Trying to grab right fork /philosopher-fork-semaphore-2
+[86791] | Grab right fork /philosopher-fork-semaphore-2
+[86791] | Start eating.
+[86793] | Done eating.
+[86793] | Release left fork /philosopher-fork-semaphore-3
+[86793] | Release right fork /philosopher-fork-semaphore-4
+[86793] | Start thinking.
+[86794] | Grab left fork /philosopher-fork-semaphore-4
+[86794] | Trying to grab right fork /philosopher-fork-semaphore-0
+[86794] | Grab right fork /philosopher-fork-semaphore-0
+[86794] | Start eating.
+[86792] | Done thinking.
+[86792] | Trying to get permission from the waiter to grab forks.
+[86792] | Got permission from the waiter to grab forks.
+[86792] | Trying to grab left fork /philosopher-fork-semaphore-2
+[86791] | Done eating.
+[86791] | Release left fork /philosopher-fork-semaphore-1
+[86791] | Release right fork /philosopher-fork-semaphore-2
+[86791] | Start thinking.
+[86792] | Grab left fork /philosopher-fork-semaphore-2
+[86792] | Trying to grab right fork /philosopher-fork-semaphore-3
+[86792] | Grab right fork /philosopher-fork-semaphore-3
+[86792] | Start eating.
+[86793] | Done thinking.
+[86793] | Trying to get permission from the waiter to grab forks.
+[86793] | Got permission from the waiter to grab forks.
+[86793] | Trying to grab left fork /philosopher-fork-semaphore-3
+[86790] | Done thinking.
+[86790] | Trying to get permission from the waiter to grab forks.
+[86790] | Got permission from the waiter to grab forks.
+[86790] | Trying to grab left fork /philosopher-fork-semaphore-0
+[86794] | Done eating.
+[86794] | Release left fork /philosopher-fork-semaphore-4
+[86794] | Release right fork /philosopher-fork-semaphore-0
+[86794] | Start thinking.
+[86790] | Grab left fork /philosopher-fork-semaphore-0
+[86790] | Trying to grab right fork /philosopher-fork-semaphore-1
+[86790] | Grab right fork /philosopher-fork-semaphore-1
+[86790] | Start eating.
+[86792] | Done eating.
+[86792] | Release left fork /philosopher-fork-semaphore-2
+[86792] | Release right fork /philosopher-fork-semaphore-3
+[86792] | Start thinking.
+[86793] | Grab left fork /philosopher-fork-semaphore-3
+[86793] | Trying to grab right fork /philosopher-fork-semaphore-4
+[86793] | Grab right fork /philosopher-fork-semaphore-4
+[86793] | Start eating.
+[86791] | Done thinking.
+[86791] | Trying to get permission from the waiter to grab forks.
+[86791] | Got permission from the waiter to grab forks.
+[86791] | Trying to grab left fork /philosopher-fork-semaphore-1
+[86790] | Done eating.
+[86790] | Release left fork /philosopher-fork-semaphore-0
+[86790] | Release right fork /philosopher-fork-semaphore-1
+[86790] | Start thinking.
+[86791] | Grab left fork /philosopher-fork-semaphore-1
+[86791] | Trying to grab right fork /philosopher-fork-semaphore-2
+[86791] | Grab right fork /philosopher-fork-semaphore-2
+[86791] | Start eating.
+[86794] | Done thinking.
+[86794] | Trying to get permission from the waiter to grab forks.
+[86794] | Got permission from the waiter to grab forks.
+[86794] | Trying to grab left fork /philosopher-fork-semaphore-4
+[86791] | Done eating.
+[86791] | Release left fork /philosopher-fork-semaphore-1
+[86791] | Release right fork /philosopher-fork-semaphore-2
+[86791] | Start thinking.
+[86793] | Done eating.
+[86793] | Release left fork /philosopher-fork-semaphore-3
+[86793] | Release right fork /philosopher-fork-semaphore-4
+[86793] | Start thinking.
+[86794] | Grab left fork /philosopher-fork-semaphore-4
+[86794] | Trying to grab right fork /philosopher-fork-semaphore-0
+[86794] | Grab right fork /philosopher-fork-semaphore-0
+[86794] | Start eating.
+[86792] | Done thinking.
+[86792] | Trying to get permission from the waiter to grab forks.
+[86792] | Got permission from the waiter to grab forks.
+[86792] | Trying to grab left fork /philosopher-fork-semaphore-2
+[86792] | Grab left fork /philosopher-fork-semaphore-2
+[86792] | Trying to grab right fork /philosopher-fork-semaphore-3
+[86792] | Grab right fork /philosopher-fork-semaphore-3
+[86792] | Start eating.
+[86791] | Done thinking.
+[86791] | Trying to get permission from the waiter to grab forks.
+[86791] | Got permission from the waiter to grab forks.
+[86791] | Trying to grab left fork /philosopher-fork-semaphore-1
+[86791] | Grab left fork /philosopher-fork-semaphore-1
+[86791] | Trying to grab right fork /philosopher-fork-semaphore-2
+[86793] | Done thinking.
+[86793] | Trying to get permission from the waiter to grab forks.
+[86793] | Got permission from the waiter to grab forks.
+[86793] | Trying to grab left fork /philosopher-fork-semaphore-3
+[86790] | Done thinking.
+[86790] | Trying to get permission from the waiter to grab forks.
+[86794] | Done eating.
+[86794] | Release left fork /philosopher-fork-semaphore-4
+[86794] | Release right fork /philosopher-fork-semaphore-0
+[86794] | Start thinking.
+[86790] | Got permission from the waiter to grab forks.
+[86790] | Trying to grab left fork /philosopher-fork-semaphore-0
+[86790] | Grab left fork /philosopher-fork-semaphore-0
+[86790] | Trying to grab right fork /philosopher-fork-semaphore-1
+[86792] | Done eating.
+[86792] | Release left fork /philosopher-fork-semaphore-2
+[86792] | Release right fork /philosopher-fork-semaphore-3
+[86792] | Start thinking.
+[86791] | Grab right fork /philosopher-fork-semaphore-2
+[86791] | Start eating.
+[86793] | Grab left fork /philosopher-fork-semaphore-3
+[86793] | Trying to grab right fork /philosopher-fork-semaphore-4
+[86793] | Grab right fork /philosopher-fork-semaphore-4
+[86793] | Start eating.
+[86794] | Done thinking.
+[86794] | Trying to get permission from the waiter to grab forks.
+[86794] | Got permission from the waiter to grab forks.
+[86794] | Trying to grab left fork /philosopher-fork-semaphore-4
+[86793] | Done eating.
+[86793] | Release left fork /philosopher-fork-semaphore-3
+[86793] | Release right fork /philosopher-fork-semaphore-4
+[86793] | Start thinking.
+[86794] | Grab left fork /philosopher-fork-semaphore-4
+[86794] | Trying to grab right fork /philosopher-fork-semaphore-0
+[86792] | Done thinking.
+[86792] | Trying to get permission from the waiter to grab forks.
+[86792] | Got permission from the waiter to grab forks.
+[86792] | Trying to grab left fork /philosopher-fork-semaphore-2
+[86793] | Done thinking.
+[86793] | Trying to get permission from the waiter to grab forks.
+[86791] | Done eating.
+[86791] | Release left fork /philosopher-fork-semaphore-1
+[86791] | Release right fork /philosopher-fork-semaphore-2
+[86791] | Start thinking.
+[86790] | Grab right fork /philosopher-fork-semaphore-1
+[86790] | Start eating.
+[86792] | Grab left fork /philosopher-fork-semaphore-2
+[86792] | Trying to grab right fork /philosopher-fork-semaphore-3
+[86792] | Grab right fork /philosopher-fork-semaphore-3
+[86792] | Start eating.
+[86793] | Got permission from the waiter to grab forks.
+[86793] | Trying to grab left fork /philosopher-fork-semaphore-3
+[86794] | Grab right fork /philosopher-fork-semaphore-0
+[86794] | Start eating.
+[86793] | Grab left fork /philosopher-fork-semaphore-3
+[86793] | Trying to grab right fork /philosopher-fork-semaphore-4
+[86790] | Done eating.
+[86791] | Done thinking.
+[86790] | Signal received. Leaving table. Ate 3 times. Thought 2 times.
+[86792] | Done eating.
+[86790] | Releasing awaited right fork semaphore: /philosopher-fork-semaphore-1
+[86791] | Signal received. Leaving table. Ate 3 times. Thought 3 times.
+[86790] | Releasing awaited left fork semaphore: /philosopher-fork-semaphore-0
+[86792] | Signal received. Leaving table. Ate 4 times. Thought 3 times.
+[86793] | Signal received. Leaving table. Ate 3 times. Thought 3 times.
+[86790] | Releasing awaited waiter semaphore: /philosopher-waiter-semaphore
+[86792] | Releasing awaited right fork semaphore: /philosopher-fork-semaphore-3
+[86793] | Releasing awaited left fork semaphore: /philosopher-fork-semaphore-3
+[86794] | Signal received. Leaving table. Ate 2 times. Thought 2 times.
+[86794] | Releasing awaited right fork semaphore: /philosopher-fork-semaphore-0
+[86792] | Releasing awaited left fork semaphore: /philosopher-fork-semaphore-2
+[86793] | Releasing awaited waiter semaphore: /philosopher-waiter-semaphore
+[86794] | Releasing awaited left fork semaphore: /philosopher-fork-semaphore-4
+[86792] | Releasing awaited waiter semaphore: /philosopher-waiter-semaphore
+[86794] | Releasing awaited waiter semaphore: /philosopher-waiter-semaphore
+[86794] | I'm the last process on the table, start cleaning system.
+[86794] | Semaphore with name: /philosopher-mutex-semaphore deleted from system.
+[86794] | Semaphore with name: /philosopher-waiter-semaphore deleted from system.
+[86794] | Semaphore with name: /philosopher-fork-semaphore-0 deleted from system.
+[86794] | Semaphore with name: /philosopher-fork-semaphore-1 deleted from system.
+[86794] | Semaphore with name: /philosopher-fork-semaphore-2 deleted from system.
+[86794] | Semaphore with name: /philosopher-fork-semaphore-3 deleted from system.
+[86794] | Semaphore with name: /philosopher-fork-semaphore-4 deleted from system.
+[86794] | Shared memory with name: /philosopher-shared-mem deleted from system.
