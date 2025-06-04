@@ -1,1 +1,24 @@
-## Computing systems architecture & OS Course || HSE SE 2 course 
+## Computing systems architecture, Operating systems
+
+
+### RISC-V asm
+
+|   | **Overview**  |  **Links** |
+| --------- | --------- | --------- |
+|  **RISC-V strings, working with files, sliding window** | Search for all occurrences of a pattern in text. Program that searches an ASCII string for a given substring and returns a list of indices of the first character for all occurrences of the substring in the string. The substring is entered as a parameter. Organize the output of the results to a file (using appropriate number-to-string conversions).  | [Documentation](https://github.com/AvtorPaka/CSA-OS/blob/master/src/CSA/IndHw/FindSubstrIdx/report/report.md)</br></br>[Source code](https://github.com/AvtorPaka/CSA-OS/blob/master/src/CSA/IndHw/FindSubstrIdx)  |
+| **RISC-V arithmetic coprocessor instructions**  | Program that calculates, using a power series with an accuracy of no worse than $0.1 \%$, the value of the binomial function $(1 + x)^{m}$ for specific parameters $m$ and $x$ in RISC-V Processor assembly language using arithmetic coprocessor instructions  | [Documentation](https://github.com/AvtorPaka/CSA-OS/blob/master/src/CSA/IndHw/BinomialSeries/report.md) </br></br> [Source code](https://github.com/AvtorPaka/CSA-OS/blob/master/src/CSA/IndHw/BinomialSeries)  |
+| **Implementation of C strncpy function**  | C [strncpy](https://cplusplus.com/reference/cstring/strncpy/) function implemented in RISC-V asm  | [Documentation](https://github.com/AvtorPaka/CSA-OS/blob/master/src/CSA/Hw/Hw_6/hw.md) </br></br>[Source code](https://github.com/AvtorPaka/CSA-OS/blob/master/src/CSA/Hw/Hw_6)  |
+| **RISC-V static and stack memory**  | Formation of array B from elements of array A, which form a non-decreasing sequence.  | [Documentation](https://github.com/AvtorPaka/CSA-OS/blob/master/src/CSA/IndHw/NonDecreasingSequence/report.md) </br></br> [Source code](https://github.com/AvtorPaka/CSA-OS/blob/master/src/CSA/IndHw/NonDecreasingSequence)  |
+
+
+### Linux OS API-s, Network, multithreading, multiprocessing (POSIX, UNIX SYSTEM-V IPC, TCP, UDP)
+
+*All programs are written in C++ in C-style using C-libraries.*
+
+|   | **Overview**  |  **Links** |
+| --------- | --------- | --------- |
+| **POSIX multithreading**  | Multithreading simulation of hotel workflow with concurent access to shared resources - hotel rooms by visitors - POSIX threads.  |  [Documentation](https://github.com/AvtorPaka/CSA-OS/blob/master/src/CSA/IndHw/PosixMultithreading/report/hw.md)</br></br>[Source code](https://github.com/AvtorPaka/CSA-OS/blob/master/src/CSA/IndHw/PosixMultithreading) |
+| **POSIX, SYSTEM-V channels IPC**  | Multiprocessor program for calculating separately the number of vowels and consonants in an ASCII string using POSIX and UNIX SYSTEM-V channels as an IPC method. 6 vesions of implementation are presented, separated by architecture.  | [Documentation](https://github.com/AvtorPaka/CSA-OS/blob/master/src/OS/IndHw/Channel_IPC/src/grade_9/subreport_9.md)</br></br>[Source code](https://github.com/AvtorPaka/CSA-OS/blob/master/src/OS/IndHw/Channel_IPC/src)  |
+|  **[Dijkstra Dining philosophers problem](https://en.wikipedia.org/wiki/Dining_philosophers_problem) POSIX, SYSTEM-V IPC** | Multiprocessor simulation of Dining philosophers problem with POSIX semaphores, shared memory, SYSTEM-V semaphores, shared memory, message queues  | [Documentation](https://github.com/AvtorPaka/CSA-OS/blob/master/src/OS/IndHw/ProcessSemaforaSync/report/report.md)</br></br>[POSIX semaphores, shared memory](https://github.com/AvtorPaka/CSA-OS/blob/master/src/OS/IndHw/ProcessSemaforaSync/src/grade_6_7)</br></br>[SYSTEM-V semaphores, shared memory](https://github.com/AvtorPaka/CSA-OS/blob/master/src/OS/IndHw/ProcessSemaforaSync/src/grade_8)</br></br>[SYSTEM-V semaphores, message queues](https://github.com/AvtorPaka/CSA-OS/blob/master/src/OS/IndHw/ProcessSemaforaSync/src/grade_9)  |
+| **[Dijkstra Dining philosophers problem](https://en.wikipedia.org/wiki/Dining_philosophers_problem) TCP**  | Multiprocessor simulation of Dining philosophers problem with multithreading TCP client-service approach: philosophers are individual clients, synchronized via a server that records the state of the table and organizes interaction with philosophers.  | [Documentation](https://github.com/AvtorPaka/CSA-OS/blob/master/src/OS/IndHw/TCP_Client_Service/report/report.md)</br></br>[Source code](https://github.com/AvtorPaka/CSA-OS/blob/master/src/OS/IndHw/TCP_Client_Service/src/grade_9_10)  |
+| **[Dijkstra Dining philosophers problem](https://en.wikipedia.org/wiki/Dining_philosophers_problem) UDP**  |  Multiprocessor simulation of Dining philosophers problem with UDP client-service approach: philosophers are individual clients, synchronized via a server that records the state of the table and organizes interaction with philosophers.  | [Documentation](https://github.com/AvtorPaka/CSA-OS/blob/master/src/OS/IndHw/UDP_Client_Service/report/report.md)</br></br>[Source code](https://github.com/AvtorPaka/CSA-OS/blob/master/src/OS/IndHw/UDP_Client_Service/src/grade_9_10)  |
